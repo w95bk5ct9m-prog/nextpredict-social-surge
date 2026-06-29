@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXTPredict 2026 Â· Social Surge</title>
+<title>NEXTPredict 2026 · Social Surge</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -26,7 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ââ HEADER ââ */
+/* ── HEADER ── */
 .site-header {
   background: var(--black);
   padding: 56px 60px 52px;
@@ -81,7 +81,63 @@ body {
 .hm-v { font-size: 13px; font-weight: 700; color: var(--white); }
 .hm-v.gold { color: var(--gold); }
 
-/* ââ NAV BAR ââ */
+/* ── PHASE SWITCHER ── */
+.phase-bar {
+  background: var(--black);
+  border-bottom: 2px solid #222;
+}
+.phase-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  gap: 2px;
+}
+.phase-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 24px 14px;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  transition: background .12s, border-color .12s;
+  text-align: left;
+}
+.phase-btn:hover { background: #111; }
+.phase-btn.active { border-bottom-color: var(--gold); background: #111; }
+.phase-btn-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 3px;
+  transition: color .12s;
+}
+.phase-btn.active .phase-btn-label { color: var(--gold); }
+.phase-btn-title {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #333;
+  text-transform: uppercase;
+  transition: color .12s;
+}
+.phase-btn.active .phase-btn-title { color: var(--white); }
+.phase-btn-sub {
+  font-size: 10px;
+  font-weight: 500;
+  color: #444;
+  margin-top: 3px;
+  transition: color .12s;
+}
+.phase-btn.active .phase-btn-sub { color: #888; }
+
+/* ── NAV BAR ── */
 .sticky-nav {
   background: var(--white);
   border-bottom: 2px solid var(--black);
@@ -181,14 +237,14 @@ body {
   letter-spacing: -0.02em;
 }
 
-/* ââ MAIN ââ */
+/* ── MAIN ── */
 main {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 60px 100px;
 }
 
-/* ââ CARD ââ */
+/* ── CARD ── */
 .person-card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -203,6 +259,9 @@ main {
   height: 3px;
   background: var(--gold);
 }
+.person-card[data-phase="old"]::before {
+  background: #888;
+}
 .person-card:hover {
   border-color: #d0d0d0;
   box-shadow: 0 8px 32px rgba(0,0,0,0.06);
@@ -214,10 +273,10 @@ main {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 20px 24px18px;
+  padding: 20px 24px 18px;
   border-bottom: 1px solid var(--line);
 }
-  .avatar {
+.avatar {
   width: 40px; height: 40px;
   background: var(--black);
   display: flex; align-items: center; justify-content: center;
@@ -225,6 +284,9 @@ main {
   color: var(--gold);
   letter-spacing: 0.04em;
   flex-shrink: 0;
+}
+.person-card[data-phase="old"] .avatar {
+  color: #aaa;
 }
 .person-name {
   font-size: 14px;
@@ -274,6 +336,9 @@ main {
   color: var(--gold);
   opacity: 0.85;
 }
+.person-card[data-phase="old"] .tag {
+  color: #888;
+}
 
 /* card footer */
 .card-foot {
@@ -314,7 +379,7 @@ main {
   margin-left: auto;
 }
 
-/* ââ NO RESULTS ââ */
+/* ── NO RESULTS ── */
 #no-results {
   display: none;
   text-align: center;
@@ -324,7 +389,7 @@ main {
   font-weight: 500;
 }
 
-/* ââ TIPS ââ */
+/* ── TIPS ── */
 .tips-section {
   margin-top: 40px;
   border-top: 2px solid var(--black);
@@ -361,7 +426,7 @@ main {
   margin-bottom: 5px;
 }
 
-/* ââ FOOTER ââ */
+/* ── FOOTER ── */
 .site-footer {
   background: var(--black);
   padding: 28px 60px;
@@ -394,6 +459,7 @@ main {
 @media (max-width: 700px) {
   .site-header, main { padding-left: 20px; padding-right: 20px; }
   .nav-inner { padding-left: 20px; padding-right: 20px; }
+  .phase-inner { padding-left: 20px; padding-right: 20px; }
   .tips-grid { grid-template-columns: 1fr 1fr; }
   .header-title { font-size: 52px; }
   .tone-pill { display: none; }
@@ -401,21 +467,37 @@ main {
 }
 </style>
 </head>
-<Body>
+<body>
 
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="header-kicker">NEXTPredict 2026 &nbsp;Â·&nbsp; LinkedIn Social Surge &nbsp;Â·&nbsp; Early Bird Phase</div>
+    <div class="header-kicker">NEXTPredict 2026 &nbsp;·&nbsp; LinkedIn Social Surge</div>
     <h1 class="header-title">NEXTPREDICT<br><span>SOCIAL SURGE</span></h1>
     <div class="header-meta">
-      <div class="hm"><div class="hm-l">Team</div><div class="hm-v">19 Posts</div></div>
+      <div class="hm"><div class="hm-l">Team</div><div class="hm-v">19 People</div></div>
       <div class="hm"><div class="hm-l">Early Bird Ends</div><div class="hm-v gold">17 July 2026</div></div>
-      <div class="hm"><div class="hm-l">Event</div><div class="hm-v">22-23 Oct Â· Hudson Yards, NYC</div></div>
+      <div class="hm"><div class="hm-l">Event</div><div class="hm-v">22-23 Oct · Hudson Yards, NYC</div></div>
       <div class="hm"><div class="hm-l">Tickets</div><div class="hm-v">tickets.next.io/NEXTPredict-2026</div></div>
     </div>
   </div>
 </header>
+
+<!-- PHASE SWITCHER -->
+<div class="phase-bar">
+  <div class="phase-inner">
+    <button class="phase-btn active" id="phase-btn-new" onclick="switchPhase('new',this)">
+      <div class="phase-btn-label">Current</div>
+      <div class="phase-btn-title">Early Bird</div>
+      <div class="phase-btn-sub">OLIVER10 · Prices go up 17 July</div>
+    </button>
+    <button class="phase-btn" id="phase-btn-old" onclick="switchPhase('old',this)">
+      <div class="phase-btn-label">Archive</div>
+      <div class="phase-btn-title">Founder Phase</div>
+      <div class="phase-btn-sub">OLIVER15 · Closed 19 June</div>
+    </button>
+  </div>
+</div>
 
 <!-- NAV -->
 <div class="sticky-nav">
@@ -428,7 +510,7 @@ main {
       </div>
     </div>
     <div class="name-grid">
-      <button class="tab tab-all active" onclick="filterTab('all',this)"><div class="tab-init">ARL</div>Everyone</button>
+      <button class="tab tab-all active" onclick="filterTab('all',this)"><div class="tab-init">ALL</div>Everyone</button>
       <button class="tab" onclick="filterTab('oliver',this)"><div class="tab-init">OJ</div>Oliver</button>
       <button class="tab" onclick="filterTab('stuart',this)"><div class="tab-init">SC</div>Stuart</button>
       <button class="tab" onclick="filterTab('rory',this)"><div class="tab-init">RC</div>Rory</button>
@@ -436,10 +518,10 @@ main {
       <button class="tab" onclick="filterTab('nikolai',this)"><div class="tab-init">ND</div>Nikolai</button>
       <button class="tab" onclick="filterTab('georgia',this)"><div class="tab-init">GB</div>Georgia</button>
       <button class="tab" onclick="filterTab('ross',this)"><div class="tab-init">RS</div>Ross</button>
-      <button class="tab" onclick="filterTab('rhys',this)"><div class="tab-init">RG</div>Rhys</button>
+      <button class="tab" onclick="filterTab('rhys',this)"><div class="tab-init">RJ</div>Rhys</button>
       <button class="tab" onclick="filterTab('mathias',this)"><div class="tab-init">MM</div>Mathias</button>
       <button class="tab" onclick="filterTab('neil',this)"><div class="tab-init">NJ</div>Neil</button>
-      <button class="tab" onclick="filterTab('nicholas',this)"><div class="tab-init">NG</div>Nicolas</button>
+      <button class="tab" onclick="filterTab('nicholas',this)"><div class="tab-init">NG</div>Nicholas</button>
       <button class="tab" onclick="filterTab('carolina',this)"><div class="tab-init">CD</div>Carolina</button>
       <button class="tab" onclick="filterTab('alina',this)"><div class="tab-init">AM</div>Alina</button>
       <button class="tab" onclick="filterTab('klara',this)"><div class="tab-init">KS</div>Klara</button>
@@ -456,14 +538,18 @@ main {
 <main>
 <div id="no-results">No match - try another name.</div>
 
-<!-- OLIVER -->
-<div class="person-card" data-person="oliver" data-name="oliver jordan">
+<!-- ═══════════════════════════════════════════ -->
+<!-- NEW PHASE: EARLY BIRD                       -->
+<!-- ═══════════════════════════════════════════ -->
+
+<!-- OLIVER - NEW -->
+<div class="person-card" data-person="oliver" data-name="oliver jordan" data-phase="new">
   <div class="card-top">
     <div class="avatar">OJ</div>
     <div><div class="person-name">Oliver Jordan</div><div class="person-role">Growth Marketing Manager</div></div>
-    <div class="tone-pill">Personal Â· Narrative</div>
+    <div class="tone-pill">Personal · Narrative</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-oliver">Early Bird pricing for NEXTPredict is now open.
+  <div class="post-body"><div class="post-copy" id="post-oliver-new">Early Bird pricing for NEXTPredict is now open.
 
 If you've been watching this space and waiting for the right moment to get in the room - this is it.
 
@@ -476,20 +562,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-oliver',this)">Copy Post</button>
-    <span class="char-count" id="count-oliver"></span>
+    <button class="copy-btn" onclick="copyPost('post-oliver-new',this)">Copy Post</button>
+    <span class="char-count" id="count-oliver-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- STUART -->
-<div class="person-card" data-person="stuart" data-name="stuart crowley">
+<!-- STUART - NEW -->
+<div class="person-card" data-person="stuart" data-name="stuart crowley" data-phase="new">
   <div class="card-top">
     <div class="avatar">SC</div>
     <div><div class="person-name">Stuart Crowley</div><div class="person-role">Commercial Oversight &amp; Brand</div></div>
-    <div class="tone-pill">Proud Â· Structured</div>
+    <div class="tone-pill">Proud · Structured</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-stuart">Early Bird tickets for NEXTPredict 2026 are now available.
+  <div class="post-body"><div class="post-copy" id="post-stuart-new">Early Bird tickets for NEXTPredict 2026 are now available.
 
 22-23 October. 30 Hudson Yards, New York. 200+ speakers, 2,500 prediction markets leaders, two weeks before the US Midterms. The only B2B event built entirely around this industry.
 
@@ -500,20 +586,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-stuart',this)">Copy Post</button>
-    <span class="char-count" id="count-stuart"></span>
+    <button class="copy-btn" onclick="copyPost('post-stuart-new',this)">Copy Post</button>
+    <span class="char-count" id="count-stuart-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- RORY -->
-<div class="person-card" data-person="rory" data-name="rory credland">
+<!-- RORY - NEW -->
+<div class="person-card" data-person="rory" data-name="rory credland" data-phase="new">
   <div class="card-top">
     <div class="avatar">RC</div>
     <div><div class="person-name">Rory Credland</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Sharp Â· Financial</div>
+    <div class="tone-pill">Sharp · Financial</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-rory">Early Bird is open for NEXTPredict 2026.
+  <div class="post-body"><div class="post-copy" id="post-rory-new">Early Bird is open for NEXTPredict 2026.
 
 This is the room where the serious prediction markets conversation happens. 200+ speakers, 2,500 industry leaders. 30 Hudson Yards, New York. 22-23 October.
 
@@ -524,20 +610,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets #Finance</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Finance</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-rory',this)">Copy Post</button>
-    <span class="char-count" id="count-rory"></span>
+    <button class="copy-btn" onclick="copyPost('post-rory-new',this)">Copy Post</button>
+    <span class="char-count" id="count-rory-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- WILL -->
-<div class="person-card" data-person="will" data-name="will purchase">
+<!-- WILL - NEW -->
+<div class="person-card" data-person="will" data-name="will purchase" data-phase="new">
   <div class="card-top">
     <div class="avatar">WP</div>
     <div><div class="person-name">Will Purchase</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Analytical Â· Numbered</div>
+    <div class="tone-pill">Analytical · Numbered</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-will">NEXTPredict 2026 Early Bird pricing is live. Three things to know:
+  <div class="post-body"><div class="post-copy" id="post-will-new">NEXTPredict 2026 Early Bird pricing is live. Three things to know:
 
 1. Code OLIVER10 - [X codes left]
 2. Price goes up 17 July
@@ -550,20 +636,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-will',this)">Copy Post</button>
-    <span class="char-count" id="count-will"></span>
+    <button class="copy-btn" onclick="copyPost('post-will-new',this)">Copy Post</button>
+    <span class="char-count" id="count-will-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- NIKOLAI -->
-<div class="person-card" data-person="nikolai" data-name="nikolai dubikaytis">
+<!-- NIKOLAI - NEW -->
+<div class="person-card" data-person="nikolai" data-name="nikolai dubikaytis" data-phase="new">
   <div class="card-top">
     <div class="avatar">ND</div>
     <div><div class="person-name">Nikolai Dubikaytis</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Momentum Â· Punchy</div>
+    <div class="tone-pill">Momentum · Punchy</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-nikolai">Early Bird is live. Price goes up 17 July.
+  <div class="post-body"><div class="post-copy" id="post-nikolai-new">Early Bird is live. Price goes up 17 July.
 
 NEXTPredict 2026. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 prediction markets leaders.
 
@@ -574,20 +660,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-nikolai',this)">Copy Post</button>
-    <span class="char-count" id="count-nikolai"></span>
+    <button class="copy-btn" onclick="copyPost('post-nikolai-new',this)">Copy Post</button>
+    <span class="char-count" id="count-nikolai-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- GEORGIA -->
-<div class="person-card" data-person="georgia" data-name="georgia bloomer">
+<!-- GEORGIA - NEW -->
+<div class="person-card" data-person="georgia" data-name="georgia bloomer" data-phase="new">
   <div class="card-top">
     <div class="avatar">GB</div>
     <div><div class="person-name">Georgia Bloomer</div><div class="person-role">Sales &amp; Commercial</div></div>
-    <div class="tone-pill">Commercial Â· Question Hook</div>
+    <div class="tone-pill">Commercial · Question Hook</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-georgia">Early Bird pricing for NEXTPredict is now open.
+  <div class="post-body"><div class="post-copy" id="post-georgia-new">Early Bird pricing for NEXTPredict is now open.
 
 How many of the people you need to meet will be in that room?
 
@@ -600,20 +686,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict #Finance</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span><span class="tag">#Finance</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-georgia',this)">Copy Post</button>
-    <span class="char-count" id="count-georgia"></span>
+    <button class="copy-btn" onclick="copyPost('post-georgia-new',this)">Copy Post</button>
+    <span class="char-count" id="count-georgia-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- ROSS -->
-<div class="person-card" data-person="ross" data-name="ross stafford">
+<!-- ROSS - NEW -->
+<div class="person-card" data-person="ross" data-name="ross stafford" data-phase="new">
   <div class="card-top">
     <div class="avatar">RS</div>
     <div><div class="person-name">Ross Stafford</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Ultra-Short Â· Direct</div>
+    <div class="tone-pill">Ultra-Short · Direct</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-ross">NEXTPredict Early Bird is live.
+  <div class="post-body"><div class="post-copy" id="post-ross-new">NEXTPredict Early Bird is live.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 leaders.
 
@@ -624,20 +710,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-ross',this)">Copy Post</button>
-    <span class="char-count" id="count-ross"></span>
+    <button class="copy-btn" onclick="copyPost('post-ross-new',this)">Copy Post</button>
+    <span class="char-count" id="count-ross-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- RHYS -->
-<div class="person-card" data-person="rhys" data-name="rhys jones">
+<!-- RHYS - NEW -->
+<div class="person-card" data-person="rhys" data-name="rhys jones" data-phase="new">
   <div class="card-top">
     <div class="avatar">RJ</div>
     <div><div class="person-name">Rhys Jones</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Networking Â· The Room</div>
+    <div class="tone-pill">Networking · The Room</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-rhys">Early Bird pricing for NEXTPredict 2026 is open. The room gets more expensive after 17 July.
+  <div class="post-body"><div class="post-copy" id="post-rhys-new">Early Bird pricing for NEXTPredict 2026 is open. The room gets more expensive after 17 July.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders, two weeks before the US Midterms.
 
@@ -648,20 +734,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-rhys',this)">Copy Post</button>
-    <span class="char-count" id="count-rhys"></span>
+    <button class="copy-btn" onclick="copyPost('post-rhys-new',this)">Copy Post</button>
+    <span class="char-count" id="count-rhys-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- MATHIAS -->
-<div class="person-card" data-person="mathias" data-name="mathias massoue">
+<!-- MATHIAS - NEW -->
+<div class="person-card" data-person="mathias" data-name="mathias massoue" data-phase="new">
   <div class="card-top">
     <div class="avatar">MM</div>
     <div><div class="person-name">Mathias Massoue</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Forward-Looking Â· Big Picture</div>
+    <div class="tone-pill">Forward-Looking · Big Picture</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-mathias">Early Bird is now open for NEXTPredict 2026.
+  <div class="post-body"><div class="post-copy" id="post-mathias-new">Early Bird is now open for NEXTPredict 2026.
 
 The companies and people defining the next phase of prediction markets will be at 30 Hudson Yards, New York on 22-23 October. 200+ speakers, 2,500 leaders.
 
@@ -672,20 +758,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-mathias',this)">Copy Post</button>
-    <span class="char-count" id="count-mathias"></span>
+    <button class="copy-btn" onclick="copyPost('post-mathias-new',this)">Copy Post</button>
+    <span class="char-count" id="count-mathias-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- NEIL -->
-<div class="person-card" data-person="neil" data-name="neil judson">
+<!-- NEIL - NEW -->
+<div class="person-card" data-person="neil" data-name="neil judson" data-phase="new">
   <div class="card-top">
     <div class="avatar">NJ</div>
     <div><div class="person-name">Neil Judson</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Industry First Â· Milestone</div>
+    <div class="tone-pill">Industry First · Milestone</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-neil">NEXTPredict 2026 Early Bird pricing is live.
+  <div class="post-body"><div class="post-copy" id="post-neil-new">NEXTPredict 2026 Early Bird pricing is live.
 
 The only event built entirely around prediction markets as an industry. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 leaders. Two weeks before the US Midterms.
 
@@ -696,20 +782,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-neil',this)">Copy Post</button>
-    <span class="char-count" id="count-neil"></span>
+    <button class="copy-btn" onclick="copyPost('post-neil-new',this)">Copy Post</button>
+    <span class="char-count" id="count-neil-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- NICHOLAS -->
-<div class="person-card" data-person="nicholas" data-name="nicholas giangreco nick">
+<!-- NICHOLAS - NEW -->
+<div class="person-card" data-person="nicholas" data-name="nicholas giangreco nick" data-phase="new">
   <div class="card-top">
     <div class="avatar">NG</div>
     <div><div class="person-name">Nicholas Giangreco</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Institutional Â· Signal</div>
+    <div class="tone-pill">Institutional · Signal</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-nicholas">Early Bird pricing for NEXTPredict is live. The serious money in prediction markets will be in this room.
+  <div class="post-body"><div class="post-copy" id="post-nicholas-new">Early Bird pricing for NEXTPredict is live. The serious money in prediction markets will be in this room.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
 
@@ -720,20 +806,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict #Finance</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span><span class="tag">#Finance</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-nicholas',this)">Copy Post</button>
-    <span class="char-count" id="count-nicholas"></span>
+    <button class="copy-btn" onclick="copyPost('post-nicholas-new',this)">Copy Post</button>
+    <span class="char-count" id="count-nicholas-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- CAROLINA -->
-<div class="person-card" data-person="carolina" data-name="carolina duque">
+<!-- CAROLINA - NEW -->
+<div class="person-card" data-person="carolina" data-name="carolina duque" data-phase="new">
   <div class="card-top">
     <div class="avatar">CD</div>
     <div><div class="person-name">Carolina Duque</div><div class="person-role">Sales &amp; Commercial</div></div>
-    <div class="tone-pill">Warm Â· Community</div>
+    <div class="tone-pill">Warm · Community</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-carolina">NEXTPredict 2026 Early Bird is now open.
+  <div class="post-body"><div class="post-copy" id="post-carolina-new">NEXTPredict 2026 Early Bird is now open.
 
 If you're building something real in this space, this is where you need to be.
 
@@ -746,20 +832,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict #NewYorkCity</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span><span class="tag">#NewYorkCity</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-carolina',this)">Copy Post</button>
-    <span class="char-count" id="count-carolina"></span>
+    <button class="copy-btn" onclick="copyPost('post-carolina-new',this)">Copy Post</button>
+    <span class="char-count" id="count-carolina-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- ALINA -->
-<div class="person-card" data-person="alina" data-name="alina moskalova">
+<!-- ALINA - NEW -->
+<div class="person-card" data-person="alina" data-name="alina moskalova" data-phase="new">
   <div class="card-top">
     <div class="avatar">AM</div>
     <div><div class="person-name">Alina Moskalova</div><div class="person-role">Sales</div></div>
-    <div class="tone-pill">Short Â· Warm</div>
+    <div class="tone-pill">Short · Warm</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-alina">Early Bird tickets for NEXTPredict are available now.
+  <div class="post-body"><div class="post-copy" id="post-alina-new">Early Bird tickets for NEXTPredict are available now.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
 
@@ -770,20 +856,20 @@ tickets.next.io/NEXTPredict-2026
 #PredictionMarkets #NEXTPredict</div></div>
   <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-alina',this)">Copy Post</button>
-    <span class="char-count" id="count-alina"></span>
+    <button class="copy-btn" onclick="copyPost('post-alina-new',this)">Copy Post</button>
+    <span class="char-count" id="count-alina-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- KLARA -->
-<div class="person-card" data-person="klara" data-name="klara schoonraad">
+<!-- KLARA - NEW -->
+<div class="person-card" data-person="klara" data-name="klara schoonraad" data-phase="new">
   <div class="card-top">
     <div class="avatar">KS</div>
     <div><div class="person-name">Klara Schoonraad</div><div class="person-role">Conference Producer</div></div>
-    <div class="tone-pill">Behind the Scenes Â· Personal</div>
+    <div class="tone-pill">Behind the Scenes · Personal</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-klara">I've been building NEXTPredict 2026 for months. Early Bird pricing is now open and I want to see the right people in the room.
+  <div class="post-body"><div class="post-copy" id="post-klara-new">I've been building NEXTPredict 2026 for months. Early Bird pricing is now open and I want to see the right people in the room.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
 
@@ -794,20 +880,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets #Events</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Events</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-klara',this)">Copy Post</button>
-    <span class="char-count" id="count-klara"></span>
+    <button class="copy-btn" onclick="copyPost('post-klara-new',this)">Copy Post</button>
+    <span class="char-count" id="count-klara-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- OLGA -->
-<div class="person-card" data-person="olga" data-name="olga shemunya">
+<!-- OLGA - NEW -->
+<div class="person-card" data-person="olga" data-name="olga shemunya" data-phase="new">
   <div class="card-top">
     <div class="avatar">OS</div>
     <div><div class="person-name">Olga Shemunya</div><div class="person-role">Conference Producer</div></div>
-    <div class="tone-pill">Crisp Â· Professional</div>
+    <div class="tone-pill">Crisp · Professional</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-olga">NEXTPredict 2026 Early Bird is live.
+  <div class="post-body"><div class="post-copy" id="post-olga-new">NEXTPredict 2026 Early Bird is live.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 prediction markets leaders. Two weeks before the US Midterms.
 
@@ -818,20 +904,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets #EventProduction</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#EventProduction</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-olga',this)">Copy Post</button>
-    <span class="char-count" id="count-olga"></span>
+    <button class="copy-btn" onclick="copyPost('post-olga-new',this)">Copy Post</button>
+    <span class="char-count" id="count-olga-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- JOEY -->
-<div class="person-card" data-person="joey" data-name="joey lynch">
+<!-- JOEY - NEW -->
+<div class="person-card" data-person="joey" data-name="joey lynch" data-phase="new">
   <div class="card-top">
     <div class="avatar">JL</div>
     <div><div class="person-name">Joey Lynch</div><div class="person-role">Junior Event Partnerships Manager</div></div>
-    <div class="tone-pill">Enthusiastic Â· Junior</div>
+    <div class="tone-pill">Enthusiastic · Junior</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-joey">NEXTPredict 2026 Early Bird pricing is now open.
+  <div class="post-body"><div class="post-copy" id="post-joey-new">NEXTPredict 2026 Early Bird pricing is now open.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders, two weeks before the US Midterms.
 
@@ -842,20 +928,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-joey',this)">Copy Post</button>
-    <span class="char-count" id="count-joey"></span>
+    <button class="copy-btn" onclick="copyPost('post-joey-new',this)">Copy Post</button>
+    <span class="char-count" id="count-joey-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- IRIS -->
-<div class="person-card" data-person="iris" data-name="iris den boer">
+<!-- IRIS - NEW -->
+<div class="person-card" data-person="iris" data-name="iris den boer" data-phase="new">
   <div class="card-top">
     <div class="avatar">IB</div>
     <div><div class="person-name">Iris den Boer</div><div class="person-role">NEXT</div></div>
-    <div class="tone-pill">Clean Â· Simple</div>
+    <div class="tone-pill">Clean · Simple</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-iris">Early Bird pricing for NEXTPredict 2026 is now live.
+  <div class="post-body"><div class="post-copy" id="post-iris-new">Early Bird pricing for NEXTPredict 2026 is now live.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 leaders.
 
@@ -866,20 +952,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-iris',this)">Copy Post</button>
-    <span class="char-count" id="count-iris"></span>
+    <button class="copy-btn" onclick="copyPost('post-iris-new',this)">Copy Post</button>
+    <span class="char-count" id="count-iris-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- RAISSA -->
-<div class="person-card" data-person="raissa" data-name="raissa mangiafico">
+<!-- RAISSA - NEW -->
+<div class="person-card" data-person="raissa" data-name="raissa mangiafico" data-phase="new">
   <div class="card-top">
     <div class="avatar">RM</div>
     <div><div class="person-name">Raissa Mangiafico</div><div class="person-role">Event Manager</div></div>
-    <div class="tone-pill">Experience Â· Insider</div>
+    <div class="tone-pill">Experience · Insider</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-raissa">Event people know how quickly ticket windows close.
+  <div class="post-body"><div class="post-copy" id="post-raissa-new">Event people know how quickly ticket windows close.
 
 NEXTPredict 2026 Early Bird is open now. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
 
@@ -890,20 +976,20 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets #Events</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Events</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-raissa',this)">Copy Post</button>
-    <span class="char-count" id="count-raissa"></span>
+    <button class="copy-btn" onclick="copyPost('post-raissa-new',this)">Copy Post</button>
+    <span class="char-count" id="count-raissa-new"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
-<!-- RUMEN -->
-<div class="person-card" data-person="rumen" data-name="rumen aleksandrov">
+<!-- RUMEN - NEW -->
+<div class="person-card" data-person="rumen" data-name="rumen aleksandrov" data-phase="new">
   <div class="card-top">
     <div class="avatar">RA</div>
     <div><div class="person-name">Rumen Aleksandrov</div><div class="person-role">Production Manager</div></div>
-    <div class="tone-pill">Production Â· Craft</div>
+    <div class="tone-pill">Production · Craft</div>
   </div>
-  <div class="post-body"><div class="post-copy" id="post-rumen">A lot goes into building this. Early Bird pricing for NEXTPredict 2026 is now open.
+  <div class="post-body"><div class="post-copy" id="post-rumen-new">A lot goes into building this. Early Bird pricing for NEXTPredict 2026 is now open.
 
 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
 
@@ -914,14 +1000,477 @@ tickets.next.io/NEXTPredict-2026
 #NEXTPredict #PredictionMarkets #LiveEvents</div></div>
   <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#LiveEvents</span></div>
   <div class="card-foot">
-    <button class="copy-btn" onclick="copyPost('post-rumen',this)">Copy Post</button>
-    <span class="char-count" id="count-rumen"></span>
+    <button class="copy-btn" onclick="copyPost('post-rumen-new',this)">Copy Post</button>
+    <span class="char-count" id="count-rumen-new"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- OLD PHASE: FOUNDER                          -->
+<!-- ═══════════════════════════════════════════ -->
+
+<!-- OLIVER - OLD -->
+<div class="person-card" data-person="oliver" data-name="oliver jordan" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">OJ</div>
+    <div><div class="person-name">Oliver Jordan</div><div class="person-role">Growth Marketing Manager</div></div>
+    <div class="tone-pill">Personal · Narrative</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-oliver-old">If you've got a product, a platform, or a play in prediction markets, read on.
+
+Everyone suddenly has opinions on prediction markets. Fewer people actually have something worth putting in the room. If you're in the second group, we should talk.
+
+NEXTPredict takes over 30 Hudson Yards in New York on 22-23 October. Two days, 200+ speakers, 2,500 industry leaders, and the first event built entirely around this space, landing two weeks before the US Midterms decide a few bets of their own.
+
+We're opening a limited number of commercial partnerships for the companies who genuinely move the needle: infrastructure, data, crypto, payments, media, compliance. The folks selling "synergy" can sit this one out.
+
+Think that's you? Let's find out. DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-oliver-old',this)">Copy Post</button>
+    <span class="char-count" id="count-oliver-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- STUART - OLD -->
+<div class="person-card" data-person="stuart" data-name="stuart crowley" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">SC</div>
+    <div><div class="person-name">Stuart Crowley</div><div class="person-role">Commercial Oversight &amp; Brand</div></div>
+    <div class="tone-pill">Proud · Structured</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-stuart-old">Prediction markets is no longer an emerging story. It's a scale story.
+
+NEXTPredict takes over 30 Hudson Yards in New York on 22-23 October. Two days, 200+ speakers, 2,500 industry leaders, two weeks before the US Midterms.
+
+We're opening a limited number of commercial partnerships for companies that are genuinely part of how this space grows: infrastructure, data, crypto, payments, compliance, media.
+
+If your company belongs in that room, DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-stuart-old',this)">Copy Post</button>
+    <span class="char-count" id="count-stuart-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RORY - OLD -->
+<div class="person-card" data-person="rory" data-name="rory credland" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">RC</div>
+    <div><div class="person-name">Rory Credland</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Sharp · Financial</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rory-old">Prediction markets is attracting serious money. The companies behind that shift need a room.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders. Two weeks before the US Midterms.
+
+We're offering a limited number of commercial partnerships - infrastructure, data, crypto, payments, compliance, media. Companies that actually move the needle.
+
+If that's your business, DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets #Finance</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Finance</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rory-old',this)">Copy Post</button>
+    <span class="char-count" id="count-rory-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- WILL - OLD -->
+<div class="person-card" data-person="will" data-name="will purchase" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">WP</div>
+    <div><div class="person-name">Will Purchase</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Analytical · Numbered</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-will-old">Three types of companies belong at NEXTPredict 2026:
+
+1. The infrastructure making prediction markets possible
+2. The data and compliance layers enabling it
+3. The capital and media amplifying it
+
+22-23 October, 30 Hudson Yards, New York. 2,500 industry leaders. Limited commercial partnerships available.
+
+DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-will-old',this)">Copy Post</button>
+    <span class="char-count" id="count-will-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NIKOLAI - OLD -->
+<div class="person-card" data-person="nikolai" data-name="nikolai dubikaytis" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">ND</div>
+    <div><div class="person-name">Nikolai Dubikaytis</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Momentum · Punchy</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nikolai-old">Not every company belongs in this room.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. Two days, 200+ speakers, 2,500 leaders, two weeks before the US Midterms.
+
+We're looking for commercial partners who are building something real in this space: infrastructure, data, crypto, payments, media, compliance. Not brand awareness plays.
+
+If that's you, DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nikolai-old',this)">Copy Post</button>
+    <span class="char-count" id="count-nikolai-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- GEORGIA - OLD -->
+<div class="person-card" data-person="georgia" data-name="georgia bloomer" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">GB</div>
+    <div><div class="person-name">Georgia Bloomer</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Commercial · Question Hook</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-georgia-old">Which companies are actually shaping prediction markets from the inside?
+
+NEXTPredict 2026 is where they show up. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
+
+We're opening commercial partnerships for companies genuinely driving this space: infrastructure, data, crypto, payments, compliance, media.
+
+Think that's you? DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict #Finance</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span><span class="tag">#Finance</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-georgia-old',this)">Copy Post</button>
+    <span class="char-count" id="count-georgia-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ROSS - OLD -->
+<div class="person-card" data-person="ross" data-name="ross stafford" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">RS</div>
+    <div><div class="person-name">Ross Stafford</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Ultra-Short · Direct</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-ross-old">If your company has a real play in prediction markets, we should talk.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 leaders. Limited commercial spots.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-ross-old',this)">Copy Post</button>
+    <span class="char-count" id="count-ross-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RHYS - OLD -->
+<div class="person-card" data-person="rhys" data-name="rhys jones" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">RJ</div>
+    <div><div class="person-name">Rhys Jones</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Networking · The Room</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rhys-old">The right commercial partnerships come from being in the right room.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders, two weeks before the US Midterms.
+
+We're opening a limited number of partnerships for companies that belong here: infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rhys-old',this)">Copy Post</button>
+    <span class="char-count" id="count-rhys-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- MATHIAS - OLD -->
+<div class="person-card" data-person="mathias" data-name="mathias massoue" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">MM</div>
+    <div><div class="person-name">Mathias Massoue</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Forward-Looking · Big Picture</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-mathias-old">The companies building the next layer of prediction markets infrastructure are doing something worth paying attention to right now.
+
+NEXTPredict 2026 is where that conversation happens. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 leaders.
+
+Limited commercial partnerships available for companies in infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-mathias-old',this)">Copy Post</button>
+    <span class="char-count" id="count-mathias-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NEIL - OLD -->
+<div class="person-card" data-person="neil" data-name="neil judson" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">NJ</div>
+    <div><div class="person-name">Neil Judson</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Industry First · Milestone</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-neil-old">There's never been an event built entirely around prediction markets as an industry in its own right.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders. Two weeks before the US Midterms.
+
+We're offering a limited number of commercial partnerships for the companies shaping this space: infrastructure, data, crypto, payments, compliance, media.
+
+If that's your business, DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-neil-old',this)">Copy Post</button>
+    <span class="char-count" id="count-neil-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NICHOLAS - OLD -->
+<div class="person-card" data-person="nicholas" data-name="nicholas giangreco nick" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">NG</div>
+    <div><div class="person-name">Nicholas Giangreco</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Institutional · Signal</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nicholas-old">Institutional capital is moving into prediction markets. The companies enabling that shift have a room.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
+
+Limited commercial partnerships available: infrastructure, data, crypto, payments, compliance, media.
+
+DM me if your company belongs in this conversation. oliver@next.io
+
+#PredictionMarkets #NEXTPredict #Finance</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span><span class="tag">#Finance</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nicholas-old',this)">Copy Post</button>
+    <span class="char-count" id="count-nicholas-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- CAROLINA - OLD -->
+<div class="person-card" data-person="carolina" data-name="carolina duque" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">CD</div>
+    <div><div class="person-name">Carolina Duque</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Warm · Community</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-carolina-old">The prediction markets space is attracting companies that actually build things.
+
+NEXTPredict 2026. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 leaders, two weeks before the US Midterms.
+
+We're opening commercial partnerships for companies genuinely part of this industry's growth: infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict #NewYorkCity</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span><span class="tag">#NewYorkCity</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-carolina-old',this)">Copy Post</button>
+    <span class="char-count" id="count-carolina-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ALINA - OLD -->
+<div class="person-card" data-person="alina" data-name="alina moskalova" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">AM</div>
+    <div><div class="person-name">Alina Moskalova</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Short · Warm</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-alina-old">The right companies for NEXTPredict 2026 know exactly who they are.
+
+22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
+
+We're opening a limited number of commercial partnerships. Infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#PredictionMarkets #NEXTPredict</div></div>
+  <div class="tags"><span class="tag">#PredictionMarkets</span><span class="tag">#NEXTPredict</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-alina-old',this)">Copy Post</button>
+    <span class="char-count" id="count-alina-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- KLARA - OLD -->
+<div class="person-card" data-person="klara" data-name="klara schoonraad" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">KS</div>
+    <div><div class="person-name">Klara Schoonraad</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Behind the Scenes · Personal</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-klara-old">I've spent this year building NEXTPredict 2026 from the ground up. The commercial side of what we're putting together is worth knowing about.
+
+22-23 October, 30 Hudson Yards, New York. Two days, 200+ speakers, 2,500 industry leaders.
+
+Limited commercial partnerships available for companies in infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets #Events</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Events</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-klara-old',this)">Copy Post</button>
+    <span class="char-count" id="count-klara-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- OLGA - OLD -->
+<div class="person-card" data-person="olga" data-name="olga shemunya" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">OS</div>
+    <div><div class="person-name">Olga Shemunya</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Crisp · Professional</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-olga-old">Building an event for 2,500 prediction markets leaders takes the right partners.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. 200+ speakers. Two weeks before the US Midterms.
+
+We're opening commercial partnerships for companies that belong here: infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets #EventProduction</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#EventProduction</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-olga-a-phase="old">
+  <div class="card-top">
+    <div class="avatar">SC</div>ga-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- JOEY - OLD -->
+<div class="person-card" data-person="joey" data-name="joey lynch" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">JL</div>
+    <div><div class="person-name">Joey Lynch</div><div class="person-role">Junior Event Partnerships Manager</div></div>
+    <div class="tone-pill">Enthusiastic · Junior</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-joey-old">Commercial partnerships for NEXTPredict 2026 are open.
+
+22-23 October, 30 Hudson Yards, New York. Two days, 200+ speakers, 2,500 industry leaders, two weeks before the US Midterms.
+
+We're looking for companies with a genuine play in this space: infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-joey-old',this)">Copy Post</button>
+    <span class="char-count" id="count-joey-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- IRIS - OLD -->
+<div class="person-card" data-person="iris" data-name="iris den boer" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">IB</div>
+    <div><div class="person-name">Iris den Boer</div><div class="person-role">NEXT</div></div>
+    <div class="tone-pill">Clean · Simple</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-iris-old">Prediction markets is a space worth being in right now.
+
+NEXTPredict 2026. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
+
+Limited commercial partnerships available for companies in infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-iris-old',this)">Copy Post</button>
+    <span class="char-count" id="count-iris-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RAISSA - OLD -->
+<div class="person-card" data-person="raissa" data-name="raissa mangiafico" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">RM</div>
+    <div><div class="person-name">Raissa Mangiafico</div><div class="person-role">Event Manager</div></div>
+    <div class="tone-pill">Experience · Insider</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-raissa-old">Getting the commercial side of an event right matters as much as the content.
+
+NEXTPredict 2026. 22-23 October, 30 Hudson Yards, New York. 200+ speakers, 2,500 industry leaders.
+
+We're opening a limited number of commercial partnerships for companies genuinely in this space: infrastructure, data, crypto, payments, compliance, media.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets #Events</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Events</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-raissa-old',this)">Copy Post</button>
+    <span class="char-count" id="count-raissa-old"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RUMEN - OLD -->
+<div class="person-card" data-person="rumen" data-name="rumen aleksandrov" data-phase="old">
+  <div class="card-top">
+    <div class="avatar">RA</div>
+    <div><div class="person-name">Rumen Aleksandrov</div><div class="person-role">Production Manager</div></div>
+    <div class="tone-pill">Production · Craft</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rumen-old">A lot goes into building an event at this scale.
+
+NEXTPredict. 22-23 October, 30 Hudson Yards, New York. Two days, 200+ speakers, 2,500 industry leaders.
+
+We're opening commercial partnerships for companies that are part of this industry's infrastructure: data, payments, compliance, crypto, media.
+
+DM me or email oliver@next.io
+
+#NEXTPredict #PredictionMarkets #LiveEvents</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#LiveEvents</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rumen-old',this)">Copy Post</button>
+    <span class="char-count" id="count-rumen-old"></span>
     <span class="li-limit">3,000 char limit</span>
   </div>
 </div>
 
 <!-- TIPS -->
-<div class="tips-section">
+<div class="tips-section" id="tips-new">
   <div class="tips-heading">Before you post</div>
   <div class="tips-grid">
     <div class="tip"><strong>Timing</strong>Tue-Thu, 8-10am or 12-2pm local. Stagger posts by at least 1-2 days - it keeps the feed alive longer.</div>
@@ -933,30 +1482,69 @@ tickets.next.io/NEXTPredict-2026
   </div>
 </div>
 
+<div class="tips-section" id="tips-old" style="display:none;">
+  <div class="tips-heading">Archive note</div>
+  <div class="tips-grid">
+    <div class="tip"><strong>This phase is closed</strong>Founder pricing closed 19 June 2026. These posts are archived for reference - do not use them for new outreach.</div>
+    <div class="tip"><strong>What changed</strong>Founder Phase posts were sponsorship/partnership focused. Early Bird posts (current tab) are ticket-sale focused with OLIVER10 code.</div>
+    <div class="tip"><strong>Current posts</strong>Switch to the Early Bird tab above for the active, ready-to-post versions with OLIVER10 and the 17 July deadline hook.</div>
+  </div>
+</div>
+
 </main>
 
 <!-- FOOTER -->
 <div class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">NEXT<span>PREDICT</span> 2026</div>
-    <div class="footer-meta">Social Surge Â· Early Bird Phase Â· July 2026<br>oliver@next.io Â· Closes 17 July</div>
+    <div class="footer-meta" id="footer-meta">Social Surge · Early Bird Phase · June 2026<br>oliver@next.io · Closes 17 July</div>
   </div>
 </div>
 
 <script>
-const ids = ['oliver','stuart','rory','will','nikolai','georgia','ross','rhys','mathias','neil','nicholas','carolina','alina','klara','olga','joey','iris','raissa','rumen'];
+let currentPhase = 'new';
+const ids = ['oliver','stuart','rory','will','nikolai','georgia','ross','rhys','mathias','neil','nicholas','carolina','alina','klara','v>ga','joey','iris','raissa','rumen'];
+
+// init char counts for all cards
 ids.forEach(id => {
-  const el = document.getElementById('post-' + id);
-  const ct = document.getElementById('count-' + id);
-  if (el && ct) ct.textContent = el.innerText.trim().length + ' chars';
+  ['new','v>d'].forEach(phase => {
+    const el = document.getElementById('post-' + id + '-' + phase);
+    const ct = document.getElementById('count-' + id + '-' + phase);
+    if (el && ct) ct.textContent = el.innerText.trim().length + ' chars';
+  });
 });
+
+// init: hide old phase
+document.querySelectorAll('.person-card[data-phase="old"]').forEach(c => c.classList.add('hidden'));
+
+function switchPhase(phase, btn) {
+  currentPhase = phase;
+  document.querySelectorAll('.phase-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('search-input').value = '';
+  // reset person tabs to ALL
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.tab-all').classList.add('active');
+  // show correct phase cards, hide others
+  document.querySelectorAll('.person-card').forEach(c => {
+    c.classList.toggle('hidden', c.dataset.phase !== phase);
+  });
+  // tips
+  document.getElementById('tips-new').style.display = phase === 'new' ? '' : 'none';
+  document.getElementById('tips-v>d').style.display = phase === 'v>d' ? '' : 'none';
+  // footer
+  document.getElementById('footer-meta').innerHTML = phase === 'new'
+    ? 'Social Surge &middot; Early Bird Phase &middot; June 2026<br>oliver@next.io &middot; Closes 17 July'
+    : 'Social Surge &middot; Founder Phase &middot; Archive<br>oliver@next.io';
+  document.getElementById('no-results').style.display = 'none';
+}
 
 function copyPost(id, btn) {
   const el = document.getElementById(id);
   if (!el) return;
   const text = el.innerText.trim();
   const ok = () => {
-    btn.textContent = 'â Copied!';
+    btn.textContent = '✓ Copied!';
     btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copy Post'; btn.classList.remove('copied'); }, 2200);
   };
@@ -975,13 +1563,14 @@ function filterTab(person, btn) {
   document.getElementById('search-input').value = '';
   let visible = 0;
   document.querySelectorAll('.person-card').forEach(c => {
+    if (c.dataset.phase !== currentPhase) { c.classList.add('hidden'); return; }
     const show = person === 'all' || c.dataset.person === person;
     c.classList.toggle('hidden', !show);
     if (show) visible++;
   });
   document.getElementById('no-results').style.display = visible ? 'none' : 'block';
   if (person !== 'all') {
-    const t = document.querySelector(`.person-card[data-person="${person}"]`);
+    const t = document.querySelector(`.person-card[data-person="${person}"][data-phase="${currentPhase}"]`);
     if (t) setTimeout(() => t.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   }
 }
@@ -989,9 +1578,10 @@ function filterTab(person, btn) {
 function handleSearch(val) {
   const q = val.toLowerCase().trim();
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  if (!q) document.querySelector('.tab').classList.add('active');
+  if (!q) document.querySelector('.tab-all').classList.add('active');
   let visible = 0;
   document.querySelectorAll('.person-card').forEach(c => {
+    if (c.dataset.phase !== currentPhase) { c.classList.add('hidden'); return; }
     const show = !q || (c.dataset.name || '').includes(q);
     c.classList.toggle('hidden', !show);
     if (show) visible++;
@@ -1001,7 +1591,7 @@ function handleSearch(val) {
     const m = document.querySelector('.person-card:not(.hidden)');
     if (m) {
       const tab = document.querySelector(`.tab[onclick*="'${m.dataset.person}'"]`);
-      if (tab) tab.classList.add('active');
+      if (tab) { document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); }
     }
   }
 }
