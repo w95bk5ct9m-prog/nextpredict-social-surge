@@ -2488,7 +2488,7 @@ tickets.next.io/NEXTPredict-2026?promo=4JULY
 </div>
 
 <script>
-let currentPhase = 'new';
+let currentPhase = 'july4';
 const ids = ['oliver','stuart','rory','will','nikolai','georgia','ross','rhys','mathias','neil','nicholas','carolina','alina','klara','olga','joey','iris','raissa','rumen'];
 
 // init char counts for all cards
@@ -2503,7 +2503,7 @@ ids.forEach(id => {
 // init: hide old, vip, and july4 phases
 document.querySelectorAll('.person-card[data-phase="old"]').forEach(c => c.classList.add('hidden'));
 document.querySelectorAll('.person-card[data-phase="vip"]').forEach(c => c.classList.add('hidden'));
-document.querySelectorAll('.person-card[data-phase="july4"]').forEach(c => c.classList.add('hidden'));
+document.querySelectorAll('.person-card[data-phase="new"]').forEach(c => c.classList.add('hidden'));
 
 function switchPhase(phase, btn) {
   currentPhase = phase;
