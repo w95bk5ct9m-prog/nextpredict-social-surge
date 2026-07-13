@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================
+  FIREBLOCKS x NEXTPREDICT 2026 _ PARTNERSHIP PITCH DECK
+  Brand-guidelines edition · white base · value-exchange flow
+  ============================================================
+  Brand: Inter · Yellow #FFCF33 · Dark Grey #242426 · White #FFFFFF
+  Angle + stage fit sourced from Fireblocks discovery call (6 Jul 2026,
+  S. Morris). Goal: lead generation into enterprise operators.
+  Speakers verified 7 Jul 2026 vs public site + Monday board 2262241472.
+  Stage note: Sam declined Markets & Liquidity; topics = policy / security / payments.
+  HARD RULES: no em dashes · American English.
+  ============================================================
+-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fireblocks x NEXTPredict 2026 - Partnership Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:        #242426;
+    --ink-soft:   #3c3c40;
+    --muted:      #757575;
+    --line:       #e7e7e3;
+    --paper:      #ffffff;
+    --panel:      #f7f7f4;
+    --yellow:     #ffcf33;
+    --yellow-tint:#fff6d6;
+    --yellow-line:#f0e2a2;
+    --green:      #62ba30;
+    --font: 'Inter', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.55; font-size: 19px; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1100px; margin: 0 auto; background: var(--paper); }
+
+  /* logo lockup (recreated wordmark) */
+  .logo { display: inline-flex; align-items: center; gap: 1px; font-weight: 800; letter-spacing: -0.02em; font-size: 24px; line-height: 1; white-space: nowrap; }
+  .logo .chv { height: 0.76em; width: auto; margin: 0 0.05em; }
+  .logo .n { color: #ffffff; }
+  .logo .p { color: var(--yellow); }
+  .logo .x { color: var(--yellow); font-weight: 800; margin: 0 -0.02em; }
+
+  /* top bar */
+  .topbar { background: var(--ink); color: #fff; padding: 16px 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .topbar .tag-right { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+
+  /* cover */
+  .cover { display: grid; grid-template-columns: 1.1fr 0.9fr; }
+  .cover-left { padding: 68px 56px; display: flex; flex-direction: column; justify-content: space-between; gap: 42px; }
+  .cover-eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 22px; }
+  .cover-left h1 { font-size: clamp(46px, 6.4vw, 84px); font-weight: 800; line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase; }
+  .cover-left h1 .y { background: var(--yellow); color: var(--ink); padding: 0 0.14em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .cover-left h1 .x-mark { color: var(--muted); }
+  .cover-rule { width: 54px; height: 5px; background: var(--yellow); margin: 26px 0 0; border-radius: 2px; }
+  .cover-left .meta { display: flex; flex-direction: column; gap: 6px; }
+  .cover-left .meta span { font-size: 14px; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; }
+
+  .cover-right { background: var(--panel); border-left: 1px solid var(--line); padding: 68px 48px; display: flex; flex-direction: column; justify-content: center; }
+  .cover-right .row { display: flex; justify-content: space-between; gap: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .cover-right .row:last-child { border-bottom: none; }
+  .cover-right .row .k { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+  .cover-right .row .v { font-size: 16px; font-weight: 700; text-align: right; color: var(--ink); }
+  .cover-right .row.hot { background: var(--yellow-tint); margin: 6px -14px 0; padding: 14px; border: 1px solid var(--yellow-line); border-radius: 8px; }
+  .cover-right .row.hot .k { color: #8a6d00; }
+
+  /* section */
+  section { border-top: 1px solid var(--line); }
+  .sec-hdr { padding: 58px 56px 24px; }
+  .sec-hdr .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .sec-hdr .eyebrow::before { content: ""; width: 22px; height: 4px; background: var(--yellow); border-radius: 2px; }
+  .sec-hdr h2 { font-size: clamp(34px, 4.4vw, 56px); font-weight: 800; line-height: 0.98; letter-spacing: -0.025em; text-transform: uppercase; }
+
+  .intro { padding: 0 56px 30px; max-width: 900px; }
+  .intro p { font-size: 20px; line-height: 1.6; color: var(--ink-soft); }
+
+  /* grid + cards */
+  .grid { padding: 0 56px 30px; display: grid; gap: 20px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+  .box { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 28px 30px; }
+  .box.panel { background: var(--panel); }
+  .box.tint  { background: var(--yellow-tint); border-color: var(--yellow-line); }
+  .box.best  { border: 2px solid var(--yellow); }
+
+  .box h3 { font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin-bottom: 16px; padding-bottom: 13px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 9px; }
+  .box h3::before { content: ""; width: 8px; height: 8px; background: var(--yellow); border-radius: 2px; flex: 0 0 auto; }
+  .box.tint h3 { border-color: var(--yellow-line); }
+
+  .box p { font-size: 17px; line-height: 1.6; color: var(--ink-soft); }
+  .box p + p { margin-top: 12px; }
+  .box .big { font-size: 21px; font-weight: 700; line-height: 1.4; color: var(--ink); }
+
+  .kv { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .kv:last-child { border-bottom: none; }
+  .kv .k { flex: 0 0 132px; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+  .kv .v { font-size: 17px; font-weight: 500; color: var(--ink); }
+
+  ul.clean { list-style: none; }
+  ul.clean li { font-size: 16.5px; line-height: 1.5; padding: 10px 0 10px 26px; position: relative; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+  ul.clean li:last-child { border-bottom: none; }
+  ul.clean li::before { content: ""; position: absolute; left: 2px; top: 17px; width: 9px; height: 9px; border-radius: 2px; background: var(--yellow); }
+  ul.clean li b { font-weight: 800; color: var(--ink); }
+  .box.tint ul.clean li { border-color: var(--yellow-line); }
+
+  .price { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; margin: 2px 0 8px; color: var(--ink); }
+  .price small { font-size: 14px; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+  .line { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .line:last-child { border-bottom: none; }
+  .line .nm { font-size: 16px; font-weight: 600; color: var(--ink); }
+  .line .nm small { display: block; font-weight: 400; color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+  .line .pr { font-size: 15px; font-weight: 800; white-space: nowrap; color: var(--ink); }
+
+  .spk-row { display: flex; align-items: baseline; gap: 11px; padding: 10px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .spk-row:last-child { border-bottom: none; }
+  .spk-name { font-size: 17px; font-weight: 800; color: var(--ink); }
+  .spk-title { font-size: 14.5px; color: var(--muted); }
+  .box.tint .spk-row { border-color: var(--yellow-line); }
+
+  .q { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .q:last-child { border-bottom: none; }
+  .q .num { flex: 0 0 42px; height: 42px; width: 42px; border-radius: 50%; background: var(--panel); border: 1px solid var(--line); color: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; }
+  .q.hot .num { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+  .q h4 { font-size: 19px; font-weight: 800; line-height: 1.3; margin-bottom: 4px; color: var(--ink); }
+  .q p { font-size: 15.5px; color: var(--muted); }
+
+  .tag { display:inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+  .tag-best { background: var(--yellow); color: var(--ink); }
+  .tag-good { background: var(--ink); color: #fff; }
+  .tag-soft { background: var(--panel); color: var(--muted); border: 1px solid var(--line); }
+
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--paper); }
+  .stat-item { padding: 26px 28px; border-right: 1px solid var(--line); border-top: 4px solid var(--yellow); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--ink); }
+  .stat-lbl { font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-top: 8px; }
+
+  .callout { border-radius: 14px; padding: 30px 36px; }
+  .callout.yellow { background: var(--yellow); color: var(--ink); }
+  .callout.soft { background: var(--panel); border: 1px solid var(--line); border-left: 5px solid var(--yellow); }
+  .callout .label { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 11px; }
+  .callout.yellow .label { color: #8a6d00; }
+  .callout.soft .label { color: var(--muted); }
+  .callout p { font-size: 20px; font-weight: 600; line-height: 1.5; }
+  .callout.soft p { color: var(--ink-soft); }
+
+  .pkg-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+  .pkg-top h3 { border: none; padding: 0; margin: 0; }
+
+  .footer { background: var(--ink); color: #fff; padding: 30px 56px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .footer .contact { font-size: 13.5px; color: rgba(255,255,255,0.6); letter-spacing: 0.02em; }
+
+  @media (max-width: 880px) {
+    .cover, .grid-2, .grid-3, .stat-row { grid-template-columns: 1fr; }
+    .topbar, .sec-hdr, .grid, .intro, .cover-left, .cover-right, .footer { padding-left: 24px; padding-right: 24px; }
+    .cover-right { border-left: none; border-top: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <span class="logo"><span class="n">NE</span><svg class="chv" viewBox="0 0 36 44" aria-hidden="true"><polyline points="9,5 29,22 9,39" fill="none" stroke="#ffcf33" stroke-width="9" stroke-linejoin="miter" stroke-linecap="butt"/></svg><span class="n">T</span><span class="p">Predict</span></span>
+  <span class="tag-right">Partnership Proposal &nbsp;·&nbsp; 2026</span>
+</div>
+
+<!-- ── COVER ── -->
+<section style="border-top:none;">
+  <div class="cover">
+    <div class="cover-left">
+      <div>
+        <div class="cover-eyebrow">The World's Prediction Markets Summit</div>
+        <h1>Fireblocks<br><span class="x-mark">&times;</span> <span class="y">NEXTPredict</span></h1>
+        <div class="cover-rule"></div>
+      </div>
+      <div class="meta">
+        <span>October 22-23, 2026 &nbsp;·&nbsp; Convene, 30 Hudson Yards, NYC</span>
+        <span>Two weeks before the US Midterms</span>
+        <span>Prepared for Samantha Morris, Fireblocks</span>
+      </div>
+    </div>
+    <div class="cover-right">
+      <div class="row"><span class="k">Event</span><span class="v">NEXTPredict 2026</span></div>
+      <div class="row"><span class="k">Dates</span><span class="v">October 22-23, 2026</span></div>
+      <div class="row"><span class="k">Venue</span><span class="v">Convene, 30 Hudson Yards</span></div>
+      <div class="row"><span class="k">Scale</span><span class="v">2,500 senior delegates</span></div>
+      <div class="row"><span class="k">Prepared by</span><span class="v">Oliver Jordan, Next.io</span></div>
+      <div class="row hot"><span class="k">Follow-up call</span><span class="v">July 15</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 00 THE OPPORTUNITY ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">00 · The Opportunity</div><h2>Where Prediction<br>Markets Do Business</h2></div>
+  <div class="intro"><p>NEXTPredict is the only B2B summit built exclusively for prediction markets. Two weeks before the US Midterms, 2,500 operators, investors, and regulators convene at Hudson Yards to do serious business, in the most media-active window of the American political calendar.</p></div>
+
+  <div class="grid">
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-num">2,500</div><div class="stat-lbl">Senior delegates</div></div>
+      <div class="stat-item"><div class="stat-num">200</div><div class="stat-lbl">Speaker program</div></div>
+      <div class="stat-item"><div class="stat-num">3</div><div class="stat-lbl">Stages · 2 days</div></div>
+      <div class="stat-item"><div class="stat-num">2 wks</div><div class="stat-lbl">Before midterms</div></div>
+    </div>
+  </div>
+
+  <div class="grid grid-3">
+    <div class="box"><h3>The Format</h3><p>Content-led, not exhibition-driven. No expo hall. Three dedicated stages, private meeting rooms, and curated networking built for high-value conversations, not foot traffic.</p></div>
+    <div class="box"><h3>The Timing</h3><p>Two weeks before the Midterms, CNBC, Fox News, Bloomberg, and CNN are all actively covering prediction markets. Contessa Brewer of CNBC is moderating on site with a film crew.</p></div>
+    <div class="box"><h3>The Focus</h3><p>Not a broad fintech or gaming expo. One senior room for the prediction markets category specifically, which is what concentrates your buyers in a way a larger show cannot.</p></div>
+  </div>
+
+  <div class="grid"><div class="callout yellow"><div class="label">Why it matters for Fireblocks</div><p>The operators on your new-business list convene here. This is not brand awareness at a broad expo, it is your actual buyers, in one senior room, for two days.</p></div></div>
+</section>
+
+<!-- ── 01 YOUR GOAL ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">01 · Your Goal</div><h2>Built Around<br>Lead Generation</h2></div>
+  <div class="intro"><p>From our July 6 conversation, this proposal is shaped around what you told us, not a standard sponsor menu.</p></div>
+  <div class="grid grid-2">
+    <div class="box tint">
+      <h3>What You Told Us</h3>
+      <ul class="clean">
+        <li><b>Number one goal is lead generation</b> - new business conversations, not brand or PR spend</li>
+        <li>You want time with <b>enterprise operators</b>: the Polymarket, Kalshi and DraftKings tier</li>
+        <li>Your use cases for this market are <b>embedded wallets and payments</b>, plus custody and treasury</li>
+        <li>Branding and PR are on hold until the regulatory picture clears (Clarity Act, MTL co-licensing)</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>So Here Is What We Did</h3>
+      <p class="big">We stripped out the brand-awareness inventory and built around access.</p>
+      <p style="margin-top:14px;">Everything that follows maps to one goal: put Fireblocks in front of qualified operators for real conversations. Who you want to meet, who is already confirmed, what you bring to the room, where you fit on stage, and the packages that make it happen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 02 WHO YOU WANT TO MEET ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">02 · Who You Want To Meet</div><h2>Your Buyers,<br>In The Room</h2></div>
+  <div class="intro"><p>The room is built around the buyers you named on the call: enterprise operators, the people inside them who evaluate infrastructure, and the institutions moving into the category.</p></div>
+  <div class="grid grid-3">
+    <div class="box">
+      <h3>Enterprise Operators</h3>
+      <p>The Polymarket, Kalshi and DraftKings tier, scaling regulated products. Your primary new-business targets, and the exchanges that need custody, wallets and settlement to grow.</p>
+    </div>
+    <div class="box">
+      <h3>The Buying Roles</h3>
+      <p>Inside those operators, the people who actually evaluate your stack: heads of product, digital asset and crypto leads, risk and security, plus CFO and treasury for settlement.</p>
+    </div>
+    <div class="box">
+      <h3>Institutional Allocators</h3>
+      <p>Funds and trading firms deploying into prediction markets. The same enterprise buyer profile you already serve, discovering the category here.</p>
+    </div>
+  </div>
+  <div class="grid"><div class="callout soft"><div class="label">How we act on this</div><p>Give us the exact companies you want in front of, and we build the invitation list and your curated room around them. That is the difference between a booth and a pipeline.</p></div></div>
+</section>
+
+<!-- ── 03 WHO WE'VE GOT ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">03 · Who We've Got</div><h2>Those Buyers Are<br>Already Confirmed</h2></div>
+  <div class="intro"><p>The operators and institutions you want to meet are already on stage. 35 speakers confirmed and counting, building toward a 200-speaker program. A selection most relevant to you:</p></div>
+  <div class="grid grid-3">
+    <div class="box tint">
+      <h3>Operators &amp; Platforms</h3>
+      <div class="spk-row"><span class="spk-name">Jason Robins</span><span class="spk-title">Co-Founder &amp; CEO, DraftKings</span></div>
+      <div class="spk-row"><span class="spk-name">Jeanine Hightower-Sellitto</span><span class="spk-title">SVP &amp; GM, DraftKings Predictions</span></div>
+      <div class="spk-row"><span class="spk-name">Jeremy Levine</span><span class="spk-title">Founder, Underdog</span></div>
+      <div class="spk-row"><span class="spk-name">Alex Kane</span><span class="spk-title">Founder, Sporttrade</span></div>
+      <div class="spk-row"><span class="spk-name">Seth Young</span><span class="spk-title">CEO, High Roller</span></div>
+      <div class="spk-row"><span class="spk-name">Joe Anzures</span><span class="spk-title">Chief Business Officer, crypto.com</span></div>
+      <div class="spk-row"><span class="spk-name">Jacob Fortinsky</span><span class="spk-title">Founder, Novig</span></div>
+    </div>
+    <div class="box">
+      <h3>Capital &amp; Institutional</h3>
+      <div class="spk-row"><span class="spk-name">Adam Rosenberg</span><span class="spk-title">Senior Advisor, Blackstone</span></div>
+      <div class="spk-row"><span class="spk-name">Shaun Kelley</span><span class="spk-title">Managing Director &amp; Senior Research Analyst, Bank of America</span></div>
+      <div class="spk-row"><span class="spk-name">Julie Hoover</span><span class="spk-title">Vice President, Equity Research, Bank of America</span></div>
+      <div class="spk-row"><span class="spk-name">Brian Egger</span><span class="spk-title">Senior Industry Analyst, Bloomberg Intelligence</span></div>
+      <div class="spk-row"><span class="spk-name">Chris Grove</span><span class="spk-title">Co-founding Partner, Acies Investment</span></div>
+      <div class="spk-row"><span class="spk-name">Joe Grubb</span><span class="spk-title">Head of Business Development, Susquehanna</span></div>
+    </div>
+    <div class="box">
+      <h3>Regulation &amp; Media</h3>
+      <div class="spk-row"><span class="spk-name">David Miller</span><span class="spk-title">Director of Enforcement, CFTC</span></div>
+      <div class="spk-row"><span class="spk-name">Contessa Brewer</span><span class="spk-title">Correspondent, CNBC</span></div>
+      <div class="spk-row"><span class="spk-name">Dustin Gouker</span><span class="spk-title">Owner, Closing Line Consulting</span></div>
+      <p style="margin-top:15px; color:var(--muted); font-size:15.5px;">The rulemakers and the coverage that frame regulated settlement, in the room with your buyers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 04 SAMPLE ATTENDEE LIST ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">04 · Sample Attendee List</div><h2>Who's Already<br>In The Room</h2></div>
+  <div class="intro"><p>Beyond the speaker program, a snapshot of the buyers and decision-makers already registered, across the sectors that matter most to your lead-gen goal. Titles and companies shown, individual names withheld for privacy.</p></div>
+
+  <div class="grid grid-3">
+    <div class="box"><h3>Operators &amp; Sportsbooks</h3><p>Prediction market and regulated betting operators scaling live products. Your primary new-business targets, and the platforms that need wallets, settlement and custody to grow.</p></div>
+    <div class="box"><h3>Capital &amp; Institutional</h3><p>Banks, equity research desks and funds allocating into the category and the infrastructure around it. The same enterprise buyer you already serve.</p></div>
+    <div class="box"><h3>Crypto, Payments &amp; Regulation</h3><p>Digital asset infrastructure, settlement and payments providers, plus the legal and regulatory voices writing the rules for the category.</p></div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="box tint">
+      <h3>Operators &amp; Platforms</h3>
+      <div class="spk-row"><span class="spk-name">Chief Executive Officer</span><span class="spk-title">Rush Street Interactive</span></div>
+      <div class="spk-row"><span class="spk-name">VP, Innovation Hub</span><span class="spk-title">Rush Street Interactive</span></div>
+      <div class="spk-row"><span class="spk-name">Director, Corporate Communications</span><span class="spk-title">DraftKings</span></div>
+      <div class="spk-row"><span class="spk-name">Founder &amp; CEO</span><span class="spk-title">Predictive Labs</span></div>
+      <div class="spk-row"><span class="spk-name">Co-founder &amp; CEO</span><span class="spk-title">Saperity Technologies</span></div>
+    </div>
+    <div class="box">
+      <h3>Capital, Payments &amp; Regulation</h3>
+      <div class="spk-row"><span class="spk-name">Investment</span><span class="spk-title">Citi</span></div>
+      <div class="spk-row"><span class="spk-name">Analyst</span><span class="spk-title">Macquarie Capital</span></div>
+      <div class="spk-row"><span class="spk-name">Partner, former CFTC Division Director</span><span class="spk-title">Milbank LLP</span></div>
+      <div class="spk-row"><span class="spk-name">Chief Executive Officer</span><span class="spk-title">Vault Network</span></div>
+      <div class="spk-row"><span class="spk-name">Director, Gaming &amp; Gambling</span><span class="spk-title">Beyond Bancard</span></div>
+    </div>
+  </div>
+  <div class="grid"><div class="callout soft"><div class="label">A live list</div><p>This is a snapshot of an expanding room. We will walk you through the current registered profile on July 15, and share a fuller breakdown as registrations build toward October.</p></div></div>
+</section>
+
+<!-- ── 05 WHAT YOU BRING ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">05 · What You Bring</div><h2>Why This Room<br>Needs Fireblocks</h2></div>
+  <div class="intro"><p>As prediction markets institutionalize, operators need regulated infrastructure they can trust. That is the layer you sell, and the room is full of the people who need it.</p></div>
+  <div class="grid grid-2">
+    <div class="box">
+      <h3>Embedded Wallets</h3>
+      <p>Operators want on-platform crypto funding without building it themselves. Your embedded wallet layer is the answer, and every scaling exchange in the room is a candidate.</p>
+    </div>
+    <div class="box">
+      <h3>Payments &amp; Settlement</h3>
+      <p>Cross-border settlement and instant pay-ins and pay-outs at lower cost. The rails the category runs on, in a room where operators are choosing a provider right now.</p>
+    </div>
+    <div class="box">
+      <h3>Custody &amp; Treasury</h3>
+      <p>As real money clears through these platforms, qualified custody and treasury move from nice-to-have to required. Your regulated, institution-grade answer stands out.</p>
+    </div>
+    <div class="box">
+      <h3>Financial Operations</h3>
+      <p>Reporting and financial operations tooling for the CFOs scaling these businesses. A second conversation inside every operator you meet.</p>
+    </div>
+  </div>
+  <div class="grid"><div class="callout yellow"><div class="label">The positioning</div><p>In a room built on regulated settlement, Fireblocks answers the question every operator is asking: what settles the market, and is it compliant?</p></div></div>
+</section>
+
+<!-- ── 05 HOW YOU GENERATE LEADS ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">06 · How You Generate Leads</div><h2>Your Lead-Gen<br>Playbook Here</h2></div>
+  <div class="intro"><p>Lead generation was your number one goal, so this is the core of the proposal. Four ways NEXTPredict turns two days into qualified operator conversations.</p></div>
+  <div class="grid grid-2">
+    <div class="box best">
+      <div class="pkg-top"><h3>Host a Curated Workshop</h3><span class="tag tag-best">Primary play</span></div>
+      <p style="font-size:16px;">A closed room on your topic - payments, wallets, custody. Face time with a pre-selected group of operators, and scanner data on everyone who attended so follow-up is clean.</p>
+    </div>
+    <div class="box best">
+      <div class="pkg-top"><h3>Book Private 1:1s</h3><span class="tag tag-best">Primary play</span></div>
+      <p style="font-size:16px;">A private meeting room as your base for both days, with operator meetings pre-arranged before doors open. This is where the workshop conversations get converted.</p>
+    </div>
+    <div class="box">
+      <div class="pkg-top"><h3>We Bring Your Targets</h3><span class="tag tag-good">The difference</span></div>
+      <p style="font-size:16px;">Name the operators you want to meet. Oliver runs both sponsorship and ticketing, so we work to get those specific companies into the audience and into your room.</p>
+    </div>
+    <div class="box">
+      <div class="pkg-top"><h3>Speak, If You Want To</h3><span class="tag tag-soft">Optional</span></div>
+      <p style="font-size:16px;">Entirely optional and only on your terms: policy, security, or payments. A voice on stage warms the room, but you do not need it to hit your lead-gen goal.</p>
+    </div>
+  </div>
+  <div class="grid"><div class="callout soft"><div class="label">Left out on purpose</div><p>No booths, and no branding, PR, or livestream spend. You told us brand is on hold until the regulation clears, so none of it is in here. This proposal is built only to generate pipeline.</p></div></div>
+</section>
+
+<!-- ── 06 RECOMMENDED PACKAGES ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">07 · Recommended Packages</div><h2>Built Around<br>Your Objectives</h2></div>
+  <div class="intro"><p>The two lead-gen packages that put you directly in front of operators, plus an optional speaking slot if you decide you want a voice on stage. Branding inventory such as livestream and badge sponsorship is left out on purpose.</p></div>
+  <div class="grid grid-3">
+
+    <div class="box best">
+      <div class="pkg-top"><h3>Curated Workshop</h3><span class="tag tag-best">Recommended</span></div>
+      <div class="price">&euro;85,000</div>
+      <p style="font-size:15.5px;">Host a closed-format workshop on Stage 3. You set the topic - payments, embedded wallets, custody - and we curate the room around it.</p>
+      <ul class="clean" style="margin-top:14px;">
+        <li>Structured face time with a <b>pre-selected group of operators</b></li>
+        <li><b>Delegate scanner data</b> - know exactly who attended and follow up in context</li>
+        <li><b>Five curated invite targets</b>: you nominate the companies, we make the intros</li>
+        <li>Includes 3 Full Event passes</li>
+      </ul>
+    </div>
+
+    <div class="box best">
+      <div class="pkg-top"><h3>Private Meeting Room</h3><span class="tag tag-best">Recommended</span></div>
+      <div class="price">from &euro;25,000</div>
+      <p style="font-size:15.5px;">A dedicated, branded space on the floor for both days. Your base for pre-arranged 1:1s with the operators you want to advance.</p>
+      <div style="margin-top:12px;">
+        <div class="line"><span class="nm">4-person room <small>focused deal environment</small></span><span class="pr">&euro;25,000</span></div>
+        <div class="line"><span class="nm">6-person room <small>multi-party discussions</small></span><span class="pr">&euro;31,000</span></div>
+        <div class="line"><span class="nm">8-person room <small>demos + presentations</small></span><span class="pr">&euro;38,500</span></div>
+        <div class="line"><span class="nm">Pre-scheduled operator meetings</span><span class="pr">included</span></div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="pkg-top"><h3>Speaking Slot</h3><span class="tag tag-soft">Optional</span></div>
+      <div class="price">from &euro;10,000</div>
+      <p style="font-size:15.5px;">Only if you want a voice on stage, on policy, security, or payments. Not required to hit your lead-gen goal, but it warms the room ahead of your meetings.</p>
+      <div style="margin-top:12px;">
+        <div class="line"><span class="nm">Non-branded panel <small>earn the room on substance</small></span><span class="pr">&euro;10,000</span></div>
+        <div class="line"><span class="nm">Custom session <small>your narrative + a moderator</small></span><span class="pr">&euro;21,500</span></div>
+        <div class="line"><span class="nm">Partner presentation <small>your slot, up to 30 min + client</small></span><span class="pr">&euro;30,000</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── 07 COMMERCIAL SCENARIOS ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">08 · Two Ways to Structure This</div><h2>Two Ways to<br>Structure This</h2></div>
+  <div class="intro"><p>Both are built around lead generation. The difference is depth of access and the tier it unlocks.</p></div>
+  <div class="grid grid-2">
+    <div class="box best">
+      <div class="pkg-top"><h3>Scenario A · Maximum Pipeline</h3><span class="tag tag-best">Platinum</span></div>
+      <div class="price">&euro;123,500</div>
+      <div class="kv"><div class="k">Workshop</div><div class="v">Curated Workshop - &euro;85,000</div></div>
+      <div class="kv"><div class="k">Meeting room</div><div class="v">8-person Private Room - &euro;38,500</div></div>
+      <div class="kv"><div class="k">Passes</div><div class="v">6 Full Event passes included</div></div>
+      <div class="kv"><div class="k">Tier perks</div><div class="v">Platinum status, filmed interview, performance summary, priority support</div></div>
+      <p style="margin-top:15px; font-size:15.5px;">The workshop fills the pipeline through curated access. The private room is where you convert those conversations over two days. Maximum qualified meeting volume.</p>
+    </div>
+    <div class="box">
+      <div class="pkg-top"><h3>Scenario B · Focused Lead-Gen</h3><span class="tag tag-good">Gold</span></div>
+      <div class="price">&euro;31,000</div>
+      <div class="kv"><div class="k">Meeting room</div><div class="v">6-person Private Room - &euro;31,000</div></div>
+      <div class="kv"><div class="k">Meetings</div><div class="v">Operator 1:1s pre-arranged before doors open</div></div>
+      <div class="kv"><div class="k">Passes</div><div class="v">3 Full Event passes included</div></div>
+      <div class="kv"><div class="k">Optional</div><div class="v">Add a policy / security / payments speaking slot from &euro;10,000</div></div>
+      <p style="margin-top:15px; font-size:15.5px;">A leaner entry that stays pure lead-gen: a private base with pre-booked operator meetings, and a speaking slot only if you decide you want one.</p>
+    </div>
+  </div>
+  <div class="grid"><div class="callout soft"><div class="label">On the Money20/20 overlap</div><p>We know Money20/20 is the same week. NEXTPredict serves a distinct segment, the prediction markets ecosystem specifically, not the broad fintech crowd. The audiences are largely separate, so splitting a few people across both is practical. Tell us on July 15 how many you are realistically working with and we will size the package to that.</p></div></div>
+</section>
+
+<!-- ── 08 NEXT STEPS ── -->
+<section>
+  <div class="sec-hdr"><div class="eyebrow">09 · Next Steps</div><h2>From<br>Here</h2></div>
+  <div class="grid">
+    <div class="box">
+      <div class="q hot"><div class="num">1</div><div><h4>July 15 - follow-up call</h4><p>We walk through the packages in detail, share the current attendee profile, and shape what a Fireblocks workshop topic and format could look like. Calendar invite to follow.</p></div></div>
+      <div class="q"><div class="num">2</div><div><h4>Confirm your target operator list</h4><p>Share the companies or roles you want us to curate invitations toward. The earlier we have this, the stronger the room.</p></div></div>
+      <div class="q"><div class="num">3</div><div><h4>Contract and secure inventory</h4><p>Preferred packages are reserved first-come. We issue the contract and work back from the artwork deadlines.</p></div></div>
+      <div class="q"><div class="num">4</div><div><h4>October 22-23 - NEXTPredict 2026</h4><p>Convene, 30 Hudson Yards, New York City. Two weeks before the Midterms.</p></div></div>
+    </div>
+  </div>
+  <div class="grid"><div class="callout soft"><div class="label">Key deadlines</div><p>Print artwork by September 11, digital by September 30. Premium inventory is limited: the Workshop has three slots across both days, so early confirmation also buys the lead time to curate your room well.</p></div></div>
+</section>
+
+<!-- ── FOOTER ── -->
+<div class="footer">
+  <span class="logo"><span class="n">NE</span><svg class="chv" viewBox="0 0 36 44" aria-hidden="true"><polyline points="9,5 29,22 9,39" fill="none" stroke="#ffcf33" stroke-width="9" stroke-linejoin="miter" stroke-linecap="butt"/></svg><span class="n">T</span><span class="p">Predict</span></span>
+  <span class="contact">Oliver Jordan &nbsp;·&nbsp; oliver@next.io &nbsp;·&nbsp; +44 7466 275902</span>
+</div>
+
+</div>
+</body>
+</html>
