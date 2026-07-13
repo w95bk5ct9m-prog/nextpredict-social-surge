@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- deployed: 2026-07-06 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -360,6 +359,32 @@ main {
   color: #e84545;
   opacity: 0.9;
 }
+.person-card[data-phase="pricerise"]::before {
+  background: #c0392b;
+}
+.person-card[data-phase="pricerise"] .avatar {
+  color: #c0392b;
+}
+.person-card[data-phase="pricerise"] .tag {
+  color: #c0392b;
+  opacity: 0.9;
+}
+.wave-divider {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 28px 0 8px !important;
+  margin-bottom: 0 !important;
+}
+.wave-divider-inner {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
 
 /* card footer */
 .card-foot {
@@ -507,10 +532,15 @@ main {
 <!-- PHASE SWITCHER -->
 <div class="phase-bar">
   <div class="phase-inner">
-    <button class="phase-btn active" id="phase-btn-july4" onclick="switchPhase('july4',this)">
+    <button class="phase-btn active" id="phase-btn-pricerise" onclick="switchPhase('pricerise',this)">
       <div class="phase-btn-label">Current</div>
+      <div class="phase-btn-title">Price Rise</div>
+      <div class="phase-btn-sub">OLIVER10 · Closes 17 July</div>
+    </button>
+    <button class="phase-btn" id="phase-btn-july4" onclick="switchPhase('july4',this)">
+      <div class="phase-btn-label">Last Week</div>
       <div class="phase-btn-title">July 4th</div>
-      <div class="phase-btn-sub">$200 off · Lowest price until October</div>
+      <div class="phase-btn-sub">$200 off · Promo link</div>
     </button>
     <button class="phase-btn" id="phase-btn-vip" onclick="switchPhase('vip',this)">
       <div class="phase-btn-label">Premium</div>
@@ -2431,6 +2461,1495 @@ tickets.next.io/NEXTPredict-2026?promo=4JULY
   </div>
 </div>
 
+<!-- PRICERISE PHASE CARDS -->
+
+<!-- WAVE 1 DIVIDER -->
+<div class="person-card wave-divider" data-phase="pricerise">
+  <div class="wave-divider-inner">Wave 1 - Monday 13 July &nbsp;·&nbsp; Speakers + Code</div>
+</div>
+
+<!-- OLIVER - PRICERISE W1 -->
+<div class="person-card" data-person="oliver" data-name="oliver jordan" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">OJ</div>
+    <div><div class="person-name">Oliver Jordan</div><div class="person-role">Growth Marketing Manager</div></div>
+    <div class="tone-pill">Excited · Founder-voice</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-oliver-pricerise1">Big week for NEXTPredict.
+
+We've just locked in Jason Robins (Co-Founder and CEO, DraftKings), Jeanine Hightower-Sellitto (SVP and GM, DraftKings Predictions), Contessa Brewer (Correspondent, CNBC), and Adam Rosenberg (Senior Advisor, Blackstone) for the stage at 30 Hudson Yards this October.
+
+These are the people shaping how prediction markets scale commercially. Early Bird pricing closes this Friday.
+
+After Friday, tickets go from $1,199 to $1,599.
+
+Use code OLIVER10 at checkout. [X] codes left. Price rises 17 July.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-oliver-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-oliver-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- STUART - PRICERISE W1 -->
+<div class="person-card" data-person="stuart" data-name="stuart crowley" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">SC</div>
+    <div><div class="person-name">Stuart Crowley</div><div class="person-role">Commercial Oversight &amp; Brand</div></div>
+    <div class="tone-pill">Proud · Structured</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-stuart-pricerise1">The speaker lineup for NEXTPredict NYC is taking shape.
+
+Shaun Kelley (Managing Director and Senior Research Analyst, Bank of America) and Brian Egger (Senior Industry Analyst, Bloomberg Intelligence) are both confirmed for 22-23 October at Hudson Yards.
+
+If you cover or operate in prediction markets from the finance side, this is the event.
+
+Early Bird closes Friday. Tickets go from $1,199 to $1,599 after that.
+
+Code OLIVER10 saves 10% before the price rises. [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-stuart-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-stuart-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RORY - PRICERISE W1 -->
+<div class="person-card" data-person="rory" data-name="rory credland" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RC</div>
+    <div><div class="person-name">Rory Credland</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Sharp · Financial</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rory-pricerise1">Some strong confirmations this week for NEXTPredict NYC.
+
+Adam Rosenberg (Senior Advisor, Blackstone) and Chris Grove (Co-founding partner, Acies Investment) are both in for 22-23 October at Hudson Yards.
+
+The investment side of the prediction markets conversation is well represented.
+
+Early Bird prices close Friday. After 17 July, it's $1,599.
+
+Code OLIVER10 at checkout - [X] codes left, price rises this Friday.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets #Investing</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Investing</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rory-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-rory-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- WILL - PRICERISE W1 -->
+<div class="person-card" data-person="will" data-name="will purchase" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">WP</div>
+    <div><div class="person-name">Will Purchase</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Commercial</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-will-pricerise1">Two names confirmed this week for NEXTPredict NYC that I'm pleased to see on the stage.
+
+Joe Grubb (Head of Business Development, Susquehanna) and David Miller (Director of Enforcement, CFTC) - one of the world's leading trading firms and a key regulatory voice, both in the same room at 30 Hudson Yards on 22-23 October.
+
+Commercial and regulatory in the same room. That's what makes this event different.
+
+Early Bird pricing ends Friday. After that, $1,599.
+
+Code OLIVER10, [X] codes left, price rises 17 July.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-will-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-will-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NIKOLAI - PRICERISE W1 -->
+<div class="person-card" data-person="nikolai" data-name="nikolai dubikaytis" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">ND</div>
+    <div><div class="person-name">Nikolai Dubikaytis</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Technical · Curious</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nikolai-pricerise1">Big news for the crypto side of NEXTPredict NYC.
+
+Brigitte Weyls (General Counsel, Gemini) and Joe Anzures (Chief Business Officer, crypto.com) are both confirmed for 22-23 October at Hudson Yards.
+
+If you're watching how crypto infrastructure intersects with prediction markets, both of these names will have something to say.
+
+Early Bird closes this Friday. Price jumps from $1,199 to $1,599 on 17 July.
+
+Code OLIVER10 at checkout - [X] codes remaining.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets #Crypto</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Crypto</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nikolai-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-nikolai-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- GEORGIA - PRICERISE W1 -->
+<div class="person-card" data-person="georgia" data-name="georgia bloomer" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">GB</div>
+    <div><div class="person-name">Georgia Bloomer</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Enthusiastic · Operator-focused</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-georgia-pricerise1">Genuinely excited about this week's speaker confirmations for NEXTPredict NYC.
+
+Jason Robins (Co-Founder and CEO, DraftKings) and Seth Young (CEO, High Roller) on stage together at 30 Hudson Yards this October. Two people building real prediction market products at scale.
+
+22-23 October, NYC. Two weeks before the US Midterms.
+
+Early Bird pricing closes this Friday - after that it goes to $1,599. Code OLIVER10 saves you 10%.
+
+[X] codes left. Price rises 17 July.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-georgia-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-georgia-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ROSS - PRICERISE W1 -->
+<div class="person-card" data-person="ross" data-name="ross stafford" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RS</div>
+    <div><div class="person-name">Ross Stafford</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Market-focused · Clean</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-ross-pricerise1">The media layer at NEXTPredict is looking very strong.
+
+Contessa Brewer (Correspondent, CNBC) and Brian Egger (Senior Industry Analyst, Bloomberg Intelligence) are both confirmed for 22-23 October at Hudson Yards.
+
+When Bloomberg Intelligence and CNBC are both on stage at the same prediction markets event, it's worth paying attention to.
+
+Early Bird closes Friday. $1,199 now, $1,599 after 17 July.
+
+OLIVER10 at checkout - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets #Media</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Media</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-ross-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-ross-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RHYS - PRICERISE W1 -->
+<div class="person-card" data-person="rhys" data-name="rhys jones" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RJ</div>
+    <div><div class="person-name">Rhys Jones</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Finance · Invested</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rhys-pricerise1">The Wall Street contingent at NEXTPredict is building.
+
+Shaun Kelley and Julie Hoover (Bank of America) · Adam Rosenberg (Blackstone) · Brian Egger (Bloomberg Intelligence).
+
+That's serious institutional finance attention on prediction markets, all confirmed for 22-23 October at 30 Hudson Yards.
+
+Early Bird pricing closes this Friday. After 17 July, tickets rise to $1,599.
+
+Code OLIVER10 - [X] codes left, price rises Friday.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets #Finance</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Finance</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rhys-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-rhys-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- MATHIAS - PRICERISE W1 -->
+<div class="person-card" data-person="mathias" data-name="mathias massoue" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">MM</div>
+    <div><div class="person-name">Mathias Massoue</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Trading · Commercial</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-mathias-pricerise1">A confirmation I've been waiting on: Joe Grubb (Head of Business Development, Susquehanna) is confirmed for NEXTPredict NYC.
+
+Susquehanna at a prediction markets conference. That's a meaningful signal for where this industry is going.
+
+22-23 October, 30 Hudson Yards. Two weeks before the US Midterms.
+
+Early Bird closes this Friday - after that, $1,599. Code OLIVER10 saves 10%, [X] codes remaining.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-mathias-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-mathias-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NEIL - PRICERISE W1 -->
+<div class="person-card" data-person="neil" data-name="neil judson" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">NJ</div>
+    <div><div class="person-name">Neil Judson</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Exchange-focused · Direct</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-neil-pricerise1">Two operator founders confirmed for NEXTPredict NYC this week.
+
+Jeremy Levine (Founder, Underdog) and Alex Kane (Founder, Sportstrade) - both building exchange products in this space, both in New York on 22-23 October.
+
+If you're building in prediction markets or adjacent to it, this is the room.
+
+Early Bird pricing ends Friday. After 17 July, $1,599.
+
+Code OLIVER10, [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-neil-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-neil-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NICHOLAS - PRICERISE W1 -->
+<div class="person-card" data-person="nicholas" data-name="nicholas giangreco" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">NG</div>
+    <div><div class="person-name">Nicholas Giangreco</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Strategic · Analytical</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nicholas-pricerise1">NEXTPredict is shaping up to be a strong room.
+
+Chris Grove (Co-founding partner, Acies Investment) and Dustin Gouker (Owner, Closing Line Consulting) confirmed for 22-23 October at Hudson Yards.
+
+Two of the most informed perspectives in this industry, both on stage. If you track prediction markets seriously, these are names you know.
+
+Early Bird pricing closes this Friday. After that, $1,599.
+
+OLIVER10 at checkout - [X] codes left, price rises 17 July.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nicholas-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-nicholas-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- CAROLINA - PRICERISE W1 -->
+<div class="person-card" data-person="carolina" data-name="carolina duque" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">CD</div>
+    <div><div class="person-name">Carolina Duque</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Warm · Purposeful</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-carolina-pricerise1">Excited to share some new speaker confirmations for NEXTPredict NYC.
+
+Jason Robins (Co-Founder and CEO, DraftKings) and Jeanine Hightower-Sellitto (SVP and GM, DraftKings Predictions) are both on stage on 22-23 October at 30 Hudson Yards.
+
+Having both their CEO and GM of Predictions in the room tells you something about where this event is positioned.
+
+Early Bird closes Friday. $1,199 now, $1,599 after 17 July.
+
+Code OLIVER10 - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-carolina-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-carolina-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ALINA - PRICERISE W1 -->
+<div class="person-card" data-person="alina" data-name="alina moskalova" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">AM</div>
+    <div><div class="person-name">Alina Moskalova</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Event-aware</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-alina-pricerise1">Good week for speaker news on NEXTPredict NYC.
+
+Brigitte Weyls (General Counsel, Gemini) now confirmed for 22-23 October at Hudson Yards.
+
+Legal and compliance on the crypto side of prediction markets is a big conversation right now. She's one of the right people to have it with.
+
+Early Bird closes this Friday. After 17 July, $1,599.
+
+Code OLIVER10 - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-alina-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-alina-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- KLARA - PRICERISE W1 -->
+<div class="person-card" data-person="klara" data-name="klara schoonraad" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">KS</div>
+    <div><div class="person-name">Klara Schoonraad</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Thoughtful · Producer</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-klara-pricerise1">The NEXTPredict program is coming together.
+
+Contessa Brewer (Correspondent, CNBC) and David Miller (Director of Enforcement, CFTC) are both confirmed for 22-23 October at 30 Hudson Yards.
+
+Media and regulation on stage at the same event. That's the conversation the industry needs to have.
+
+Early Bird pricing closes this Friday. After 17 July, tickets go from $1,199 to $1,599.
+
+Code OLIVER10, [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-klara-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-klara-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- OLGA - PRICERISE W1 -->
+<div class="person-card" data-person="olga" data-name="olga shemunya" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">OS</div>
+    <div><div class="person-name">Olga Shemunya</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Professional · Production-proud</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-olga-pricerise1">Lots of strong confirmations coming in for NEXTPredict NYC.
+
+Joe Anzures (Chief Business Officer, crypto.com) and Joe Grubb (Head of Business Development, Susquehanna) are both now confirmed for 22-23 October at 30 Hudson Yards.
+
+crypto.com and Susquehanna in the same room as operators, investors, and regulators building this industry. That's the event.
+
+Early Bird closes Friday. $1,199 now, $1,599 from 17 July.
+
+Code OLIVER10 - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-olga-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-olga-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- JOEY - PRICERISE W1 -->
+<div class="person-card" data-person="joey" data-name="joey lynch" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">JL</div>
+    <div><div class="person-name">Joey Lynch</div><div class="person-role">Junior Event Partnerships Manager</div></div>
+    <div class="tone-pill">Friendly · Commercial</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-joey-pricerise1">Big speaker news for NEXTPredict NYC this week.
+
+Adam Rosenberg (Senior Advisor, Blackstone) and Brian Egger (Senior Industry Analyst, Bloomberg Intelligence) confirmed for 22-23 October at Hudson Yards.
+
+The financial world's attention on prediction markets is real. These two being on stage backs that up.
+
+Early Bird closes this Friday. Code OLIVER10 saves 10% before the price rises to $1,599.
+
+[X] codes left. 17 July deadline.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-joey-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-joey-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- IRIS - PRICERISE W1 -->
+<div class="person-card" data-person="iris" data-name="iris den boer" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">IB</div>
+    <div><div class="person-name">Iris den Boer</div><div class="person-role">NEXT</div></div>
+    <div class="tone-pill">Content-aware · Engaged</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-iris-pricerise1">Some exciting speaker confirmations this week for NEXTPredict NYC 2026.
+
+Jeremy Levine (Founder, Underdog) and Seth Young (CEO, High Roller) both confirmed for 22-23 October at 30 Hudson Yards.
+
+Two of the most interesting operators in the prediction markets ecosystem, on stage two weeks before the US Midterms.
+
+Early Bird closes Friday. $1,199 now, $1,599 after 17 July.
+
+OLIVER10 at checkout - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-iris-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-iris-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RAISSA - PRICERISE W1 -->
+<div class="person-card" data-person="raissa" data-name="raissa mangiafico" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RM</div>
+    <div><div class="person-name">Raissa Mangiafico</div><div class="person-role">Event Manager</div></div>
+    <div class="tone-pill">Warm · Event-oriented</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-raissa-pricerise1">We've been confirming speakers for NEXTPredict NYC all week.
+
+Jason Robins (DraftKings) · Contessa Brewer (CNBC) · Shaun Kelley (Bank of America) · Brigitte Weyls (Gemini).
+
+That's operators, media, finance, and crypto all in one room at 30 Hudson Yards on 22-23 October. Two weeks before the Midterms.
+
+Early Bird closes this Friday. After 17 July, it's $1,599.
+
+Code OLIVER10, [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-raissa-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-raissa-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RUMEN - PRICERISE W1 -->
+<div class="person-card" data-person="rumen" data-name="rumen aleksandrov" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RA</div>
+    <div><div class="person-name">Rumen Aleksandrov</div><div class="person-role">Production Manager</div></div>
+    <div class="tone-pill">Technical · Concise</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rumen-pricerise1">NEXTPredict NYC speaker list is building fast.
+
+Alex Kane (Founder, Sportstrade) and Chris Grove (Co-founding partner, Acies Investment) confirmed for 22-23 October at Hudson Yards.
+
+Exchange infrastructure meets investment intelligence. 30 Hudson Yards, NYC.
+
+Early Bird closes this Friday. Price goes from $1,199 to $1,599 on 17 July.
+
+Code OLIVER10 - [X] codes remaining.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rumen-pricerise1',this)">Copy Post</button>
+    <span class="char-count" id="count-rumen-pricerise1"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- WAVE 2 DIVIDER -->
+<div class="person-card wave-divider" data-phase="pricerise">
+  <div class="wave-divider-inner">Wave 2 - Wednesday 15 July &nbsp;·&nbsp; 48 Hours + Code</div>
+</div>
+
+<!-- OLIVER - PRICERISE W2 -->
+<div class="person-card" data-person="oliver" data-name="oliver jordan" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">OJ</div>
+    <div><div class="person-name">Oliver Jordan</div><div class="person-role">Growth Marketing Manager</div></div>
+    <div class="tone-pill">Urgent · Price-focused</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-oliver-pricerise2">48 hours left at $1,199.
+
+Friday 17 July, Early Bird pricing closes for NEXTPredict NYC. After that, $1,599.
+
+That's a $400 jump. The only way to lock in the lower price is code OLIVER10 at checkout. [X] codes left.
+
+22-23 October, 30 Hudson Yards, NYC. Jason Robins (DraftKings) · Contessa Brewer (CNBC) · 200+ speakers confirmed.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-oliver-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-oliver-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- STUART - PRICERISE W2 -->
+<div class="person-card" data-person="stuart" data-name="stuart crowley" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">SC</div>
+    <div><div class="person-name">Stuart Crowley</div><div class="person-role">Commercial Oversight &amp; Brand</div></div>
+    <div class="tone-pill">Measured · Clear</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-stuart-pricerise2">Two days left.
+
+Early Bird pricing for NEXTPredict NYC closes this Friday. After 17 July, tickets rise from $1,199 to $1,599.
+
+If you've been thinking about it, 48 hours is the window.
+
+Code OLIVER10 saves 10% before the deadline. [X] codes remaining.
+
+22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-stuart-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-stuart-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RORY - PRICERISE W2 -->
+<div class="person-card" data-person="rory" data-name="rory credland" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RC</div>
+    <div><div class="person-name">Rory Credland</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Sharp · Punchy</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rory-pricerise2">$400 price jump in 48 hours.
+
+NEXTPredict NYC Early Bird closes Friday 17 July. $1,199 today. $1,599 from Saturday.
+
+Use OLIVER10 before Friday. [X] codes left.
+
+30 Hudson Yards, 22-23 October.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rory-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-rory-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- WILL - PRICERISE W2 -->
+<div class="person-card" data-person="will" data-name="will purchase" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">WP</div>
+    <div><div class="person-name">Will Purchase</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Deadline-focused</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-will-pricerise2">48 hours at this price.
+
+Early Bird for NEXTPredict NYC ends Friday. $1,199 goes to $1,599 after 17 July.
+
+Shaun Kelley (Bank of America) · David Miller (CFTC) · 200+ speakers confirmed.
+
+Code OLIVER10 - [X] codes left. Closes Friday.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-will-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-will-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NIKOLAI - PRICERISE W2 -->
+<div class="person-card" data-person="nikolai" data-name="nikolai dubikaytis" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">ND</div>
+    <div><div class="person-name">Nikolai Dubikaytis</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Technical · Urgent</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nikolai-pricerise2">The Early Bird window closes in 48 hours.
+
+NEXTPredict NYC: $1,199 today. $1,599 from Saturday.
+
+Code OLIVER10 at checkout before Friday. [X] codes left.
+
+22-23 October, Hudson Yards. Brigitte Weyls (Gemini) · Joe Anzures (crypto.com) · 200+ speakers.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets #Crypto</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span><span class="tag">#Crypto</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nikolai-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-nikolai-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- GEORGIA - PRICERISE W2 -->
+<div class="person-card" data-person="georgia" data-name="georgia bloomer" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">GB</div>
+    <div><div class="person-name">Georgia Bloomer</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Engaged · Warm</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-georgia-pricerise2">Pricing on NEXTPredict closes in 48 hours.
+
+$1,199 today. $1,599 after Friday 17 July.
+
+If you're in prediction markets and haven't moved on this yet, now is the window.
+
+Code OLIVER10 - [X] codes remaining. 22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-georgia-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-georgia-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ROSS - PRICERISE W2 -->
+<div class="person-card" data-person="ross" data-name="ross stafford" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RS</div>
+    <div><div class="person-name">Ross Stafford</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Clean · Market-aware</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-ross-pricerise2">Less than 48 hours at Early Bird pricing.
+
+NEXTPredict NYC closes Friday. After 17 July: $1,599.
+
+Contessa Brewer (CNBC) · Brian Egger (Bloomberg Intelligence) on stage. 22-23 October.
+
+OLIVER10 at checkout. [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-ross-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-ross-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RHYS - PRICERISE W2 -->
+<div class="person-card" data-person="rhys" data-name="rhys jones" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RJ</div>
+    <div><div class="person-name">Rhys Jones</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Finance · Compressed</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rhys-pricerise2">48 hours. $400 on the table.
+
+Early Bird closes Friday 17 July. $1,199 now, $1,599 after.
+
+Code OLIVER10, [X] codes left. Hudson Yards, NYC, 22-23 October.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rhys-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-rhys-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- MATHIAS - PRICERISE W2 -->
+<div class="person-card" data-person="mathias" data-name="mathias massoue" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">MM</div>
+    <div><div class="person-name">Mathias Massoue</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Commercial · Countdown</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-mathias-pricerise2">Two days left on Early Bird pricing for NEXTPredict NYC.
+
+$1,199 today. $1,599 on Saturday. That's a $400 gap that closes Friday.
+
+Code OLIVER10 - [X] codes left.
+
+22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-mathias-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-mathias-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NEIL - PRICERISE W2 -->
+<div class="person-card" data-person="neil" data-name="neil judson" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">NJ</div>
+    <div><div class="person-name">Neil Judson</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Deadline</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-neil-pricerise2">48 hours until the Early Bird closes.
+
+NEXTPredict NYC, 22-23 October. Jeremy Levine (Underdog) · Alex Kane (Sportstrade) · 200+ confirmed.
+
+$1,199 before Friday. $1,599 after. Code OLIVER10, [X] codes remaining.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-neil-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-neil-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NICHOLAS - PRICERISE W2 -->
+<div class="person-card" data-person="nicholas" data-name="nicholas giangreco" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">NG</div>
+    <div><div class="person-name">Nicholas Giangreco</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Analytical · Crisp</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nicholas-pricerise2">Early Bird pricing closes in 48 hours.
+
+$1,199 before Friday 17 July. $1,599 after.
+
+Code OLIVER10 at checkout - [X] codes left.
+
+NEXTPredict NYC · 22-23 October · 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nicholas-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-nicholas-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- CAROLINA - PRICERISE W2 -->
+<div class="person-card" data-person="carolina" data-name="carolina duque" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">CD</div>
+    <div><div class="person-name">Carolina Duque</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Warm · Countdown</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-carolina-pricerise2">Two days to lock in the Early Bird price.
+
+NEXTPredict NYC closes Friday. After 17 July, tickets go from $1,199 to $1,599.
+
+Code OLIVER10 - [X] codes left. Jason Robins (DraftKings) and 200+ speakers confirmed for 22-23 October.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-carolina-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-carolina-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ALINA - PRICERISE W2 -->
+<div class="person-card" data-person="alina" data-name="alina moskalova" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">AM</div>
+    <div><div class="person-name">Alina Moskalova</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Window</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-alina-pricerise2">The window is 48 hours.
+
+Early Bird for NEXTPredict NYC closes this Friday. $1,199 right now. $1,599 from Saturday.
+
+Use OLIVER10 before the deadline. [X] codes remaining.
+
+22-23 October, Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-alina-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-alina-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- KLARA - PRICERISE W2 -->
+<div class="person-card" data-person="klara" data-name="klara schoonraad" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">KS</div>
+    <div><div class="person-name">Klara Schoonraad</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Producer · Precise</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-klara-pricerise2">48 hours left on the best price you'll get for NEXTPredict NYC.
+
+Closes Friday 17 July. After that, $400 more.
+
+Code OLIVER10, [X] codes left. 22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-klara-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-klara-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- OLGA - PRICERISE W2 -->
+<div class="person-card" data-person="olga" data-name="olga shemunya" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">OS</div>
+    <div><div class="person-name">Olga Shemunya</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Professional · Deadline</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-olga-pricerise2">Less than 48 hours on Early Bird pricing.
+
+NEXTPredict NYC - $1,199 today, $1,599 from Saturday.
+
+200+ speakers confirmed for 22-23 October at 30 Hudson Yards. Code OLIVER10 - [X] codes left. Deadline: Friday 17 July.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-olga-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-olga-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- JOEY - PRICERISE W2 -->
+<div class="person-card" data-person="joey" data-name="joey lynch" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">JL</div>
+    <div><div class="person-name">Joey Lynch</div><div class="person-role">Junior Event Partnerships Manager</div></div>
+    <div class="tone-pill">Friendly · Urgent</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-joey-pricerise2">48 hours.
+
+Early Bird for NEXTPredict NYC closes Friday. $1,199 today. $1,599 from 18 July.
+
+Code OLIVER10 at checkout - [X] codes remaining. 22-23 October, Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-joey-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-joey-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- IRIS - PRICERISE W2 -->
+<div class="person-card" data-person="iris" data-name="iris den boer" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">IB</div>
+    <div><div class="person-name">Iris den Boer</div><div class="person-role">NEXT</div></div>
+    <div class="tone-pill">Content · Countdown</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-iris-pricerise2">The Early Bird closes in 48 hours.
+
+$1,199 before Friday 17 July. $1,599 after.
+
+NEXTPredict NYC · 22-23 October · 30 Hudson Yards. Code OLIVER10, [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-iris-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-iris-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RAISSA - PRICERISE W2 -->
+<div class="person-card" data-person="raissa" data-name="raissa mangiafico" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RM</div>
+    <div><div class="person-name">Raissa Mangiafico</div><div class="person-role">Event Manager</div></div>
+    <div class="tone-pill">Warm · Deadline</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-raissa-pricerise2">Two days left at this price.
+
+Early Bird pricing for NEXTPredict NYC closes 17 July. After that, $1,599.
+
+Code OLIVER10 - [X] codes left. Lock in $1,199 before Friday.
+
+22-23 October, Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-raissa-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-raissa-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RUMEN - PRICERISE W2 -->
+<div class="person-card" data-person="rumen" data-name="rumen aleksandrov" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RA</div>
+    <div><div class="person-name">Rumen Aleksandrov</div><div class="person-role">Production Manager</div></div>
+    <div class="tone-pill">Technical · Precise</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rumen-pricerise2">48 hours. $400. Friday.
+
+Early Bird for NEXTPredict NYC closes 17 July. $1,199 now, $1,599 after.
+
+OLIVER10 at checkout. [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rumen-pricerise2',this)">Copy Post</button>
+    <span class="char-count" id="count-rumen-pricerise2"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- WAVE 3 DIVIDER -->
+<div class="person-card wave-divider" data-phase="pricerise">
+  <div class="wave-divider-inner">Wave 3 - Friday 17 July &nbsp;·&nbsp; Last Day + Code</div>
+</div>
+
+<!-- OLIVER - PRICERISE W3 -->
+<div class="person-card" data-person="oliver" data-name="oliver jordan" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">OJ</div>
+    <div><div class="person-name">Oliver Jordan</div><div class="person-role">Growth Marketing Manager</div></div>
+    <div class="tone-pill">Final · Direct</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-oliver-pricerise3">Last day at Early Bird pricing.
+
+NEXTPredict NYC - $1,199 today only. $1,599 from tomorrow.
+
+Code OLIVER10 at checkout - [X] codes left. This is the last chance at this price.
+
+22-23 October, 30 Hudson Yards, NYC.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-oliver-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-oliver-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- STUART - PRICERISE W3 -->
+<div class="person-card" data-person="stuart" data-name="stuart crowley" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">SC</div>
+    <div><div class="person-name">Stuart Crowley</div><div class="person-role">Commercial Oversight &amp; Brand</div></div>
+    <div class="tone-pill">Final · Structured</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-stuart-pricerise3">Today is the last day.
+
+Early Bird pricing for NEXTPredict NYC closes tonight. After today, $1,599.
+
+Code OLIVER10 - [X] codes left. $1,199 while it lasts.
+
+22-23 October, Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-stuart-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-stuart-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RORY - PRICERISE W3 -->
+<div class="person-card" data-person="rory" data-name="rory credland" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RC</div>
+    <div><div class="person-name">Rory Credland</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Sharp · Final push</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rory-pricerise3">Final day. $400 at stake.
+
+NEXTPredict NYC Early Bird closes today. $1,199 now. $1,599 tomorrow.
+
+OLIVER10 at checkout. [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rory-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-rory-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- WILL - PRICERISE W3 -->
+<div class="person-card" data-person="will" data-name="will purchase" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">WP</div>
+    <div><div class="person-name">Will Purchase</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-will-pricerise3">This is it - last day of Early Bird pricing.
+
+$1,199 today. $1,599 from tomorrow.
+
+NEXTPredict NYC · 22-23 October · 30 Hudson Yards. Code OLIVER10, [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-will-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-will-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NIKOLAI - PRICERISE W3 -->
+<div class="person-card" data-person="nikolai" data-name="nikolai dubikaytis" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">ND</div>
+    <div><div class="person-name">Nikolai Dubikaytis</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Technical · Last chance</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nikolai-pricerise3">Today is the deadline.
+
+NEXTPredict NYC Early Bird closes today. $1,199 while it lasts, $1,599 from 18 July.
+
+Code OLIVER10 - [X] codes remaining.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nikolai-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-nikolai-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- GEORGIA - PRICERISE W3 -->
+<div class="person-card" data-person="georgia" data-name="georgia bloomer" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">GB</div>
+    <div><div class="person-name">Georgia Bloomer</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Warm · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-georgia-pricerise3">Last chance at $1,199.
+
+NEXTPredict NYC Early Bird closes today. After today, $1,599.
+
+Code OLIVER10, [X] codes left. 22-23 October, Hudson Yards. Jason Robins (DraftKings) and 200+ speakers confirmed.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-georgia-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-georgia-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ROSS - PRICERISE W3 -->
+<div class="person-card" data-person="ross" data-name="ross stafford" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RS</div>
+    <div><div class="person-name">Ross Stafford</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Clean · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-ross-pricerise3">Today only - last day of Early Bird.
+
+NEXTPredict NYC · $1,199 today · $1,599 from tomorrow.
+
+OLIVER10 at checkout. [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-ross-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-ross-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RHYS - PRICERISE W3 -->
+<div class="person-card" data-person="rhys" data-name="rhys jones" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RJ</div>
+    <div><div class="person-name">Rhys Jones</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Finance · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rhys-pricerise3">Early Bird closes today.
+
+$1,199 for the last time. Tomorrow: $1,599.
+
+Code OLIVER10, [X] codes left. NEXTPredict NYC · 22-23 October.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rhys-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-rhys-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- MATHIAS - PRICERISE W3 -->
+<div class="person-card" data-person="mathias" data-name="mathias massoue" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">MM</div>
+    <div><div class="person-name">Mathias Massoue</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Commercial · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-mathias-pricerise3">Last day of Early Bird pricing.
+
+NEXTPredict NYC: $1,199 today. $1,599 from tomorrow.
+
+Code OLIVER10 - [X] codes remaining. 30 Hudson Yards, 22-23 October.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-mathias-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-mathias-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NEIL - PRICERISE W3 -->
+<div class="person-card" data-person="neil" data-name="neil judson" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">NJ</div>
+    <div><div class="person-name">Neil Judson</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Closing</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-neil-pricerise3">It closes today.
+
+NEXTPredict NYC Early Bird: $1,199 until tonight. $1,599 from tomorrow.
+
+OLIVER10 at checkout - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-neil-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-neil-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- NICHOLAS - PRICERISE W3 -->
+<div class="person-card" data-person="nicholas" data-name="nicholas giangreco" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">NG</div>
+    <div><div class="person-name">Nicholas Giangreco</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Analytical · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-nicholas-pricerise3">Final hours at $1,199.
+
+NEXTPredict NYC Early Bird closes today. After tonight: $1,599.
+
+Code OLIVER10, [X] codes left. 22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-nicholas-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-nicholas-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- CAROLINA - PRICERISE W3 -->
+<div class="person-card" data-person="carolina" data-name="carolina duque" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">CD</div>
+    <div><div class="person-name">Carolina Duque</div><div class="person-role">Sales &amp; Commercial</div></div>
+    <div class="tone-pill">Warm · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-carolina-pricerise3">Today is the last day of Early Bird pricing.
+
+$1,199 now, $1,599 tomorrow. NEXTPredict NYC · 22-23 October · 30 Hudson Yards.
+
+Code OLIVER10 - [X] codes remaining.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-carolina-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-carolina-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- ALINA - PRICERISE W3 -->
+<div class="person-card" data-person="alina" data-name="alina moskalova" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">AM</div>
+    <div><div class="person-name">Alina Moskalova</div><div class="person-role">Sales</div></div>
+    <div class="tone-pill">Direct · Last day</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-alina-pricerise3">Last day.
+
+Early Bird for NEXTPredict NYC closes today. $1,199 today. $1,599 from 18 July.
+
+Code OLIVER10, [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-alina-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-alina-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- KLARA - PRICERISE W3 -->
+<div class="person-card" data-person="klara" data-name="klara schoonraad" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">KS</div>
+    <div><div class="person-name">Klara Schoonraad</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Producer · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-klara-pricerise3">The Early Bird closes today.
+
+$400 difference between today and tomorrow.
+
+NEXTPredict NYC · 22-23 October. Code OLIVER10 - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-klara-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-klara-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- OLGA - PRICERISE W3 -->
+<div class="person-card" data-person="olga" data-name="olga shemunya" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">OS</div>
+    <div><div class="person-name">Olga Shemunya</div><div class="person-role">Conference Producer</div></div>
+    <div class="tone-pill">Professional · Last chance</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-olga-pricerise3">Last chance today.
+
+NEXTPredict NYC Early Bird closes tonight. $1,199 now. $1,599 from tomorrow.
+
+OLIVER10 at checkout - [X] codes left.
+
+22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-olga-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-olga-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- JOEY - PRICERISE W3 -->
+<div class="person-card" data-person="joey" data-name="joey lynch" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">JL</div>
+    <div><div class="person-name">Joey Lynch</div><div class="person-role">Junior Event Partnerships Manager</div></div>
+    <div class="tone-pill">Friendly · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-joey-pricerise3">Today's the last day at $1,199.
+
+NEXTPredict NYC Early Bird closes today. Price goes to $1,599 from 18 July.
+
+Code OLIVER10 - [X] codes remaining. 22-23 October, Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-joey-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-joey-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- IRIS - PRICERISE W3 -->
+<div class="person-card" data-person="iris" data-name="iris den boer" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">IB</div>
+    <div><div class="person-name">Iris den Boer</div><div class="person-role">NEXT</div></div>
+    <div class="tone-pill">Content · Last day</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-iris-pricerise3">It's today or $1,599.
+
+Early Bird for NEXTPredict NYC closes today. After tonight, tickets are $400 more.
+
+OLIVER10 at checkout - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-iris-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-iris-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RAISSA - PRICERISE W3 -->
+<div class="person-card" data-person="raissa" data-name="raissa mangiafico" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RM</div>
+    <div><div class="person-name">Raissa Mangiafico</div><div class="person-role">Event Manager</div></div>
+    <div class="tone-pill">Warm · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-raissa-pricerise3">Final day of Early Bird pricing.
+
+$1,199 today. $1,599 from tomorrow. NEXTPredict NYC · 22-23 October.
+
+Code OLIVER10 - [X] codes left.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-raissa-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-raissa-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
+<!-- RUMEN - PRICERISE W3 -->
+<div class="person-card" data-person="rumen" data-name="rumen aleksandrov" data-phase="pricerise">
+  <div class="card-top">
+    <div class="avatar">RA</div>
+    <div><div class="person-name">Rumen Aleksandrov</div><div class="person-role">Production Manager</div></div>
+    <div class="tone-pill">Technical · Final</div>
+  </div>
+  <div class="post-body"><div class="post-copy" id="post-rumen-pricerise3">Last day. Code OLIVER10. [X] codes left.
+
+NEXTPredict NYC Early Bird closes today. $1,199 now. $1,599 tomorrow.
+
+22-23 October, 30 Hudson Yards.
+
+tickets.next.io/NEXTPredict-2026
+
+#NEXTPredict #PredictionMarkets</div></div>
+  <div class="tags"><span class="tag">#NEXTPredict</span><span class="tag">#PredictionMarkets</span></div>
+  <div class="card-foot">
+    <button class="copy-btn" onclick="copyPost('post-rumen-pricerise3',this)">Copy Post</button>
+    <span class="char-count" id="count-rumen-pricerise3"></span>
+    <span class="li-limit">3,000 char limit</span>
+  </div>
+</div>
+
 <!-- TIPS -->
 <div class="tips-section" id="tips-new">
   <div class="tips-heading">Before you post</div>
@@ -2468,12 +3987,24 @@ tickets.next.io/NEXTPredict-2026?promo=4JULY
 <div class="tips-section" id="tips-july4" style="display:none;">
   <div class="tips-heading">July 4th promo - before you post</div>
   <div class="tips-grid">
-    <div class="tip"><strong>Fill in the code quantity</strong>Replace [X codes left] with the actual OLIVER10 quantity before posting. This is the biggest line in the post - make it accurate.</div>
+    <div class="tip"><strong>Promo link built in</strong>The $200 discount is baked into the link - no code needed. Use tickets.next.io/NEXTPredict-2026?promo=4JULY and post as-is.</div>
     <div class="tip"><strong>The main hook is the price</strong>$200 off and "lowest price until the event" is the entire message. Don't bury it. The first line needs to earn the scroll.</div>
     <div class="tip"><strong>Deadline: 17 July</strong>Every post references the 17 July price rise. That's real urgency - use it. Don't soften it or move it to the bottom.</div>
     <div class="tip"><strong>Post once this week</strong>One July 4th post per person is enough. Stagger across Tue-Thu if possible; don't all post on the same day or LinkedIn will see it as coordinated spam.</div>
     <div class="tip"><strong>Attach the image</strong>Upload the NEXTPredict JPG when composing. Posts with images get significantly more reach than text-only.</div>
     <div class="tip"><strong>Don't double up</strong>If you've already posted an Early Bird post this week, hold this one until next week. Pace them at least 2-3 days apart.</div>
+  </div>
+</div>
+
+<div class="tips-section" id="tips-pricerise">
+  <div class="tips-heading">Price Rise wave - before you post</div>
+  <div class="tips-grid">
+    <div class="tip"><strong>Wave 1 = Monday 13 July</strong>Lead with the speaker hook. Name-drop 2 confirmed speakers relevant to your network. The code OLIVER10 and Friday deadline are the close - not the opener.</div>
+    <div class="tip"><strong>Wave 2 = Wednesday 15 July</strong>48 hours left is the only message. Short, punchy. The $400 gap does the selling. Don't over-explain - let the numbers land.</div>
+    <div class="tip"><strong>Wave 3 = Friday 17 July</strong>Last day only. One clear CTA. No speaker names needed - urgency is everything. Post in the morning so people have time to act.</div>
+    <div class="tip"><strong>Fill in [X] before posting</strong>Every post has [X] codes left. Ask Oliver for the current count before you go live - this number changes and should be accurate when you post.</div>
+    <div class="tip"><strong>One wave per person per day</strong>Don't post Wave 1 and Wave 2 on the same day. Space them at least 48 hours apart. If you miss Monday, skip to the next wave.</div>
+    <div class="tip"><strong>Attach the NEXTPredict image</strong>Upload the event JPG when composing. Image posts get meaningfully more reach. Don't skip this step.</div>
   </div>
 </div>
 
@@ -2488,22 +4019,29 @@ tickets.next.io/NEXTPredict-2026?promo=4JULY
 </div>
 
 <script>
-let currentPhase = 'july4';
+let currentPhase = 'pricerise';
 const ids = ['oliver','stuart','rory','will','nikolai','georgia','ross','rhys','mathias','neil','nicholas','carolina','alina','klara','olga','joey','iris','raissa','rumen'];
 
 // init char counts for all cards
 ids.forEach(id => {
-  ['new','old','vip','july4'].forEach(phase => {
+  ['new','old','vip','july4','pricerise1','pricerise2','pricerise3'].forEach(phase => {
     const el = document.getElementById('post-' + id + '-' + phase);
     const ct = document.getElementById('count-' + id + '-' + phase);
     if (el && ct) ct.textContent = el.innerText.trim().length + ' chars';
   });
 });
 
-// init: hide old, vip, and july4 phases
+// init: hide all phases except pricerise
+document.querySelectorAll('.person-card[data-phase="new"]').forEach(c => c.classList.add('hidden'));
 document.querySelectorAll('.person-card[data-phase="old"]').forEach(c => c.classList.add('hidden'));
 document.querySelectorAll('.person-card[data-phase="vip"]').forEach(c => c.classList.add('hidden'));
-document.querySelectorAll('.person-card[data-phase="new"]').forEach(c => c.classList.add('hidden'));
+document.querySelectorAll('.person-card[data-phase="july4"]').forEach(c => c.classList.add('hidden'));
+// init tips
+document.getElementById('tips-new').style.display = 'none';
+document.getElementById('tips-old').style.display = 'none';
+document.getElementById('tips-vip').style.display = 'none';
+document.getElementById('tips-july4').style.display = 'none';
+document.getElementById('tips-pricerise').style.display = '';
 
 function switchPhase(phase, btn) {
   currentPhase = phase;
@@ -2522,13 +4060,16 @@ function switchPhase(phase, btn) {
   document.getElementById('tips-old').style.display = phase === 'old' ? '' : 'none';
   document.getElementById('tips-vip').style.display = phase === 'vip' ? '' : 'none';
   document.getElementById('tips-july4').style.display = phase === 'july4' ? '' : 'none';
+  document.getElementById('tips-pricerise').style.display = phase === 'pricerise' ? '' : 'none';
   // footer
-  document.getElementById('footer-meta').innerHTML = phase === 'new'
+  document.getElementById('footer-meta').innerHTML = phase === 'pricerise'
+    ? 'Social Surge &middot; Price Rise &middot; OLIVER10<br>oliver@next.io &middot; Closes 17 July'
+    : phase === 'new'
     ? 'Social Surge &middot; Early Bird Phase &middot; July 2026<br>oliver@next.io &middot; Closes 17 July'
     : phase === 'vip'
     ? 'Social Surge &middot; VIP Pass &middot; 40 Only<br>oliver@next.io &middot; $2,299'
     : phase === 'july4'
-    ? 'Social Surge &middot; July 4th Promo &middot; $200 Off<br>oliver@next.io &middot; Code OLIVER10'
+    ? 'Social Surge &middot; July 4th Promo &middot; $200 Off<br>oliver@next.io &middot; tickets.next.io/NEXTPredict-2026?promo=4JULY'
     : 'Social Surge &middot; Founder Phase &middot; Archive<br>oliver@next.io';
   document.getElementById('no-results').style.display = 'none';
 }
